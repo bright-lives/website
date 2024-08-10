@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-    <?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
     <?php get_header(); ?>
-    <header>
-        <h1><?php bloginfo( 'name' ); ?></h1>
-    </header>
-    <main>
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <article>
-                <h2><?php the_title(); ?></h2>
+    <body <?php body_class(); ?>>
+        <?php get_template_part( 'template-parts/page-header/page-header' ); ?>
+        <main>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+              <article>
                 <?php the_content(); ?>
-            </article>
-        <?php endwhile; endif; ?>
-    </main>
-    <footer>
-        <p>&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
-    </footer>
-    <?php wp_footer(); ?>
-</body>
+              </article>
+            <?php endwhile; endif; ?>
+        </main>
+        <?php get_template_part( 'template-parts/page-footer/page-footer' ); ?>
+        <?php wp_footer(); ?>
+    </body>
 </html>

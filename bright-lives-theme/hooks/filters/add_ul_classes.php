@@ -1,7 +1,7 @@
 <?php
 function add_ul_classes($menu, $args): string {
 
-    $classes = [];
+  $classes = [];
 
 	if (isset($args->menu_class)) {
 		$classes[] = $args->menu_class;
@@ -10,7 +10,7 @@ function add_ul_classes($menu, $args): string {
 		$classes[] = $args->add_ul_classes;
 	}
 
-    $class_string = implode(' ', $classes);
+  $class_string = implode(' ', $classes);
 
 	return preg_replace('/<ul(.*?)class="(.*?)"(.*?)>/', '<ul$1 class="' . $class_string . '" $3>', $menu);
 }

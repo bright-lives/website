@@ -6,9 +6,9 @@ $hooks_directories = [
 	'filters' => $template_dir . '/hooks/filters/*.php',
 ];
 
-foreach ( $hooks_directories as $path ) {
-	$files = glob( $path );
-	foreach ( $files as $file ) {
+foreach ($hooks_directories as $path) {
+	$files = glob($path);
+	foreach ($files as $file) {
 		require_once $file;
 	}
 }
