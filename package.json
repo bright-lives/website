@@ -1,0 +1,9 @@
+{
+  "packageManager": "pnpm@9.1.4",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  },
+  "scripts": {
+    "style:watch": "npx tailwindcss -i ./src/tailwind.css -o ./bright-lives-theme/style.css --watch"
+  }
+}
