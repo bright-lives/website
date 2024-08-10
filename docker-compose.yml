@@ -24,6 +24,7 @@ services:
       - "8000:80"
     volumes:
       - ./bright-lives-theme:/var/www/html/wp-content/themes/bright-lives-theme
+      - ./plugins:/var/www/html/wp-content/plugins
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: $MYSQL_USER
