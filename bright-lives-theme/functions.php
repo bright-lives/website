@@ -1,7 +1,14 @@
 <?php
 $template_dir = get_template_directory();
 
-require_once($template_dir . '/hooks/actions/wp_enqueue_script.php');
+$hooks_directories = [
+	'actions' => $template_dir . '/hooks/actions/*.php',
+	'filters' => $template_dir . '/hooks/filters/*.php',
+];
 
-require_once($template_dir. '/hooks/filters/add_ul_classes.php');
-require_once($template_dir. '/hooks/filters/add_li_classes.php');
+foreach ( $hooks_directories as $path ) {
+	$files = glob( $path );
+	foreach ( $files as $file ) {
+		require_once $file;
+	}
+}
