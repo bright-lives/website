@@ -6,6 +6,7 @@
  * Author: Spindle B.V.
 */
 
+global $plugin_dir;
 $plugin_dir = plugin_dir_path(__FILE__);
 
 $hooks_directories = [

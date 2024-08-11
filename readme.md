@@ -39,3 +39,10 @@ docker exec bright-lives-db-1 /usr/bin/mysqldump -u root --password=$MYSQL_ROOT_
 ```
 
 This will update the `init-db.sql` file. This file is used when running the initial command to setup the Wordpress installation.
+
+---
+
+Sources:
+
+- [Introduction to Plugin Development](https://developer.wordpress.org/plugins/intro/)
+- [Block editor](https://developer.wordpress.org/block-editor/)
