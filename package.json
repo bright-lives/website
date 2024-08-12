@@ -2,7 +2,7 @@
   "scripts": {
     "build": "wp-scripts build --webpack-src-dir=src/blocks --output-path=plugins/bright-lives-hooks/build",
     "start": "wp-scripts start --webpack-src-dir=src/blocks --output-path=plugins/bright-lives-hooks/build",
-    "style:watch": "npx tailwindcss -i ./src/tailwind.css -o ./bright-lives-theme/style.css --watch"
+    "style:watch": "npx tailwindcss -i ./src/tailwind.css -o ./bright-lives-theme/tailwind.css --watch"
   },
   "devDependencies": {
     "@wordpress/create-block": "^4.48.0",

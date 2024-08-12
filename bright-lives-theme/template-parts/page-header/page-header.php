@@ -3,7 +3,7 @@
     $menu_items = wp_get_nav_menu_items($menu_name);
 ?>
 
-<div class="flex pt-4">
+<header class="flex pt-4 absolute w-full">
     <div class="mr-auto">
         <div class="p-4">
             Logo...
@@ -30,7 +30,7 @@
             }
 			?>
     </div>
-</div>
+</header>
 <div id="mobile-menu" class="hidden md:hidden">
 	<?php
 	$args = array(
