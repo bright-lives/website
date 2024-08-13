@@ -1,15 +1,25 @@
-import { useBlockProps } from '@wordpress/block-editor';
-import {getBlockClasses} from "./get-block-classes";
+import { __ } from '@wordpress/i18n';
+import {useBlockProps, useInnerBlocksProps, RichText} from "@wordpress/block-editor";
+import {style} from "./style";
 
-export default function save() {
+export default function Save({attributes}) {
+  const { title } = attributes;
 
-	const blockProps = useBlockProps.save({
-		className: getBlockClasses(),
-	});
+  const blockProps = useBlockProps.save({
+    className: style.heroWrapper,
+  });
+  const innerBlocksProps = useInnerBlocksProps.save();
 
-	return (
-		<p { ...blockProps }>
-			{ 'Hero – hello from the saved content! foo' }
-		</p>
-	);
+  return (
+    <div { ...blockProps }>
+      <RichText.Content
+        tagName="p"
+        data-id="hero-title"
+        className="mt-10"
+        value={ title }
+        placeholder={ __( 'Heading...' ) }
+      />
+      <div {...innerBlocksProps} />
+    </div>
+  );
 }

@@ -2,7 +2,6 @@
 function add_ul_classes($menu, $args): string {
   $classes = [];
 
-
 	if (isset($args->menu_class)) {
 		$classes[] = $args->menu_class;
 	}

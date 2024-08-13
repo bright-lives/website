@@ -3,7 +3,7 @@
     $menu_items = wp_get_nav_menu_items($menu_name);
 ?>
 
-<header class="flex pt-4 absolute w-full">
+<header class="flex pt-4 absolute w-full z-10">
     <div class="mr-auto">
         <div class="p-4">
             Logo...

@@ -1,6 +1,7 @@
 <?php
 function add_a_classes( $attrs, $item, $args ): array {
-	if ( isset( $args->add_a_classes ) ) {
+
+	if (isset( $args->add_a_classes )) {
 		$attrs['class'] = $args->add_a_classes;
 	}
 

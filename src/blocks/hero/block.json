@@ -13,5 +13,13 @@
 	},
 	"textdomain": "hero",
 	"editorScript": "file:./index.js",
-	"viewScript": "file:./view.js"
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "[data-id='hero-title']",
+			"default": ""
+		}
+	}
 }

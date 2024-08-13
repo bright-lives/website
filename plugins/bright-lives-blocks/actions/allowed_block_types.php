@@ -1,4 +1,8 @@
 <?php
+/**
+ * This file will affect only core blocks.
+ * All other blocks namespaces will be registered as usual.
+ */
 function custom_allowed_block_types($allowed_blocks, $editor_context): array {
 
 	/**
@@ -36,4 +40,4 @@ function custom_allowed_block_types($allowed_blocks, $editor_context): array {
 	return $allowed_blocks;
 }
 
-add_filter('allowed_block_types_all', 'custom_allowed_block_types', 10, 2);
+//add_filter('allowed_block_types_all', 'custom_allowed_block_types', 10, 2);

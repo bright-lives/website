@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Bright Lives Hooks
- * Description: Custom hooks for the Bright Lives theme.
+ * Plugin Name: Bright Lives Blocks
+ * Description: Custom blocks for the Bright Lives theme.
  * Version: 1.0
  * Author: Spindle B.V.
-*/
+ */
 
 $plugin_dir = plugin_dir_path(__FILE__);
 

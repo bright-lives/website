@@ -1,4 +1,7 @@
 <?php
+/**
+ * Enables tailwind in the wp-admin block editor view.
+ */
 function custom_enqueue_block_editor_assets(): void
 {
 	wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/tailwind.css');

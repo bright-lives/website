@@ -1,17 +1,36 @@
 import { __ } from '@wordpress/i18n';
 
-import { useBlockProps } from '@wordpress/block-editor';
-import {getBlockClasses} from "./get-block-classes";
+import {useBlockProps, RichText, InnerBlocks} from '@wordpress/block-editor';
+import {style} from "./style";
 
-export default function Edit() {
+export default function Edit({ attributes, setAttributes }) {
 
 	const blockProps = useBlockProps({
-		className: getBlockClasses(),
+		className: style.heroWrapper,
 	});
 
+	const handleTitleChange = (newTitle) => {
+		setAttributes({ title: newTitle })
+	}
+
 	return (
-		<p { ...blockProps }>
-			{ __( 'Hero – hello from the editor!', 'hero' ) }
-		</p>
+		<div { ...blockProps }>
+			<RichText
+				tagName="p"
+				data-id="hero-title"
+				className="mt-10"
+				value={ attributes.title }
+				allowedFormats={[ 'core/bold', 'core/italic' ]}
+				onChange={handleTitleChange}
+				placeholder={ __( 'Heading...' ) }
+			/>
+			<InnerBlocks
+				allowedBlocks={ [ 'core/heading', 'core/paragraph', 'core/list' ] }
+				template={ [
+					[ 'core/heading', { placeholder: 'Example Title...' } ],
+					[ 'core/paragraph', { placeholder: 'Example text goes here...' } ]
+				]}
+			/>
+		</div>
 	);
 }
