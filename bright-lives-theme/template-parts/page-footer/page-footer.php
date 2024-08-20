@@ -5,7 +5,15 @@
                 <label class="flex text-white text-2xl font-serif mb-6" for="e-mail">Schrijf je in:</label>
                 <form class="flex">
                     <input id="e-mail" type="text" placeholder="e-mail@provider.nl" class="p-4 border-2 border-whitet" />
-	                <?php render_custom_button('Doneer nu', '#', true); ?>
+	                <?php
+	                $args = array(
+		                'text' => 'Doneer nu',
+		                'url' => '#',
+		                'border' => true,
+		                'invert' => false,
+	                );
+	                get_template_part( 'template-parts/button/button', null, $args);
+	                ?>
                 </form>
             </div>
             <div class="col-span-3 md:col-span-1">
