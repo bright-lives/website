@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home page
+ * Template Name: Home
  *
  * @package WordPress
  * @subpackage Bright lives
@@ -34,9 +34,8 @@
                                 'text' => 'Meer over onze missie',
                                 'url' => '#',
                                 'border' => true,
-                                'invert' => true
                             );
-                            get_template_part( 'template-parts/button/button', null, $args);
+                            get_template_part( 'template-parts/link-button/link-button', null, $args);
                             ?>
                         </div>
                     </div>
@@ -71,7 +70,7 @@
 		                    'border' => false,
 		                    'invert' => false,
 	                    );
-	                    get_template_part( 'template-parts/button/button', null, $args);
+	                    get_template_part( 'template-parts/link-button/link-button', null, $args);
 	                    ?>
                     </article>
                     <article class="p-10 bg-primary-600">
@@ -91,7 +90,7 @@
 		                    'border' => false,
 		                    'invert' => false,
 	                    );
-	                    get_template_part( 'template-parts/button/button', null, $args);
+	                    get_template_part( 'template-parts/link-button/link-button', null, $args);
 	                    ?>
                     </article>
                     <article class="p-10 bg-primary-700">
@@ -108,7 +107,7 @@
 		                    'border' => false,
 		                    'invert' => false,
 	                    );
-	                    get_template_part( 'template-parts/button/button', null, $args);
+	                    get_template_part( 'template-parts/link-button/link-button', null, $args);
 	                    ?>
                     </article>
                     <article class="p-10 bg-primary-800">
@@ -130,7 +129,7 @@
 		                    'border' => false,
 		                    'invert' => false,
 	                    );
-	                    get_template_part( 'template-parts/button/button', null, $args);
+	                    get_template_part( 'template-parts/link-button/link-button', null, $args);
 	                    ?>
                     </article>
                 </div>
@@ -192,7 +191,7 @@
 		                  'border' => true,
 		                  'invert' => true,
 	                  );
-	                  get_template_part( 'template-parts/button/button', null, $args);
+	                  get_template_part( 'template-parts/link-button/link-button', null, $args);
 	                  ?>
                   </div>
               </div>

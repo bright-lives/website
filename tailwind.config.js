@@ -27,10 +27,10 @@ module.exports = {
             900: "#3C1A2A",
           },
         },
-        // Replace these with content images in Wordpress
         backgroundImage: {
           'hero-home': "url('/wp-content/themes/bright-lives-theme/assets/images/backgrounds/hero-01-free-img.jpg')",
           'hero-projects': "url('/wp-content/themes/bright-lives-theme/assets/images/content/PA230074.jpg')",
+          'hero-donate': "url('/wp-content/themes/bright-lives-theme/assets/images/content/PA230280-slim.jpg')",
           'home-tile-1': "url('/wp-content/themes/bright-lives-theme/assets/images/backgrounds/eten-tafel.jpeg')",
           'home-tile-2': "url('/wp-content/themes/bright-lives-theme/assets/images/backgrounds/jongens-stoep.png')",
           'home-tile-3': "url('/wp-content/themes/bright-lives-theme/assets/images/backgrounds/klaslokaal.jpeg')",
@@ -40,7 +40,7 @@ module.exports = {
         height: {
           '80vh': '80vh',
           '60vh': '60vh'
-        }
+        },
       }
     },
     plugins: [],

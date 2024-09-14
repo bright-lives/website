@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Project page
+ * Template Name: Project
  *
  * @package WordPress
  * @subpackage Bright lives
@@ -93,6 +93,9 @@
                             Natuurlijk kent het terrein enkele klaslokalen en een kantoor.
                             Een summerhut zorgt voor een zeer gewenst schaduwplekje uit de brandende zon.
                         </p-->
+                    </div>
+                    <div>
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/content/PA230236.JPG" alt="Wa Yiri Residence">
                     </div>
                 </div>
             </div>
@@ -422,39 +425,7 @@
                         </table>
                     </div>
 
-                    <div class="m-10 p-20 bg-primary-500">
-                        <div class="mb-10">
-                            <p class="font-sans-serif text-2xl font-bold text-white">
-                                Met uw hulp kunnen we een positieve impact maken op de toekomst van kinderen in Ghana.
-                            </p>
-                        </div>
-                        <div class="mb-20">
-                            <div class="w-full max-w-lg">
-                                <div class="bg-gray-300 rounded-full h-4">
-                                    <div class="bg-amber-400 h-4 rounded-full animate-pulse" style="width: 50%;"></div>
-                                    <div class="flex justify-between my-2">
-                                        <span class="text-white">€ 0</span>
-                                        <span class="text-white">€ 19.500</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                          <p class="font-sans-serif text-white my-10">
-                              Kies voor een eenmalige donatie of word donateur en help ons om kwalitatief goed onderwijs te bieden.
-                          </p>
-                            <?php
-                            $args = array(
-                                'text' => 'Doneer nu',
-                                'url' => '#',
-                                'border' => true,
-                                'invert' => false,
-                            );
-                            get_template_part( 'template-parts/button/button', null, $args);
-                            ?>
-                        </div>
-                    </div>
+                    <?php get_template_part('template-parts/donate/donate'); ?>
                 </div>
             </section>
 
@@ -473,6 +444,9 @@
                             om de doelstellingen te realiseren en de kwaliteit te waarborgen. We hopen in de toekomst,
                             met de blauwdruk van ons succes, ook elders in Ghana een verschil te maken.
                         </p>
+                    </div>
+                    <div>
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/content/PA230053.JPG" alt="Wa Yiri Residence">
                     </div>
                 </div>
             </section>

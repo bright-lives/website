@@ -12,7 +12,7 @@
 		                'border' => true,
 		                'invert' => false,
 	                );
-	                get_template_part( 'template-parts/button/button', null, $args);
+	                get_template_part( 'template-parts/link-button/link-button', null, $args);
 	                ?>
                 </form>
             </div>

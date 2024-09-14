@@ -30,7 +30,8 @@
                 'add_ul_classes'                 => 'flex',
                 'add_li_classes'                 => 'flex font-serif tracking-wide font-bold text-white hover:text-primary-100 last:bg-white last:text-primary-500',
                 'add_li_current_menu_item_class' => '!text-primary-100 hover:text-primary-100',
-                'add_a_classes'                  => 'py-4 px-8',
+                'add_a_classes'                  => 'py-4 pr-10',
+                'add_a_classes_last'             => 'py-4 px-8',
             );
             if ($menu_items) {
                 wp_nav_menu( $args );

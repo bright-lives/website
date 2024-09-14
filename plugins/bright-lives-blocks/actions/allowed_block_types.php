@@ -13,7 +13,7 @@ function custom_allowed_block_types($allowed_blocks, $editor_context): array {
 		'core/heading',
 		'core/list',
 		'core/list-item',
-		'core/button',
+		'core/link-button',
 		'core/buttons',
 		'core/column',
 		'core/columns',
