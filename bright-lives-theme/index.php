@@ -3,7 +3,7 @@
     <?php get_header(); ?>
     <body <?php body_class(); ?>>
         <?php get_template_part( 'template-parts/page-header/page-header' ); ?>
-        <main>
+        <main class="prose lg:prose-xl">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
               <article>
                 <?php the_content(); ?>
