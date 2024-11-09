@@ -13,7 +13,7 @@
 	},
 	"textdomain": "hero",
 	"editorScript": "file:./index.js",
-	"viewScript": "file:./view.js",
+	"viewScript": ["file:./view.js", "hero-view-script"],
 	"attributes": {
 		"title": {
 			"type": "string",

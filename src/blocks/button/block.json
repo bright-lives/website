@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bright-lives/button",
+	"version": "0.1.0",
+	"title": "Button",
+	"category": "design",
+	"icon": "button",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "button",
+	"editorScript": "file:./index.js",
+	"viewScript": ["file:./view.js", "button-view-script" ],
+	"attributes": {
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"url": {
+			"type": "string",
+			"default": ""
+		},
+		"style": {
+			"enum": ["fill", "outline"],
+			"default": "fill"
+		},
+		"variant": {
+			"enum": ["normal", "inverted"],
+			"default": "normal"
+		}
+	}
+}

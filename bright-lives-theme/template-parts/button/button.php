@@ -15,6 +15,6 @@ $color_classes = $invert ? 'text-black hover:text-black' : 'text-black hover:tex
              class="filter filter-white"
              alt="button icon"
              width="16"
-             height="16">
+             height="16" />
     </span>
 </button>

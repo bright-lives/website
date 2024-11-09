@@ -4,6 +4,7 @@ module.exports = {
       "./bright-lives-theme/templates/**/*.php",
       "./bright-lives-theme/functions/**/*.php",
       "./src/blocks/**/edit.js",
+      "./src/blocks/**/save.js",
     ],
     theme: {
       container: {

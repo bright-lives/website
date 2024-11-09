@@ -22,6 +22,8 @@
 			get_template_part( 'template-parts/hero/hero', null, $args);
 			?>
 
+            <?php the_content(); ?>
+
             <section class="container mx-auto grid grid-cols-1 md:grid-cols-2">
                 <div class="items-center py-12">
                     <h2 class="text-4xl leading-normal font-serif mb-6">Visie</h2>

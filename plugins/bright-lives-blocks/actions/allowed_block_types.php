@@ -9,18 +9,7 @@ function custom_allowed_block_types($allowed_blocks, $editor_context): array {
 	 * Full list of core blocks: https://developer.wordpress.org/block-editor/reference-guides/core-blocks/
 	 */
 	$allowed_core_blocks = [
-		'core/paragraph',
-		'core/heading',
-		'core/list',
-		'core/list-item',
-		'core/link-button',
-		'core/buttons',
-		'core/column',
-		'core/columns',
-		'core/cover',
-		'core/form',
-		'core/image',
-		'core/pullquote',
+	    'core/buttons',
 	];
 
 	$all_blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
@@ -40,4 +29,4 @@ function custom_allowed_block_types($allowed_blocks, $editor_context): array {
 	return $allowed_blocks;
 }
 
-//add_filter('allowed_block_types_all', 'custom_allowed_block_types', 10, 2);
+add_filter('allowed_block_types_all', 'custom_allowed_block_types', 10, 2);

@@ -4,6 +4,9 @@ function create_custom_blocks_init(): void {
 	$directories = glob($build_dir . '/*' , GLOB_ONLYDIR);
 
 	foreach ($directories as $directory) {
+
+	    $component_name = basename($directory);
+
 		register_block_type($directory);
 	}
 }
