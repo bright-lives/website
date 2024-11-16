@@ -24,7 +24,10 @@
     },
     "url": {
       "type": "string",
-      "default": ""
+      "source": "attribute",
+      "selector": "a",
+      "attribute": "href",
+      "role": "content"
     },
     "style": {
       "enum": [

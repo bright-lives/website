@@ -1,39 +1,105 @@
 import { __ } from '@wordpress/i18n';
 import {BlockControls, RichText, useBlockProps} from '@wordpress/block-editor';
 import {
+	Popover,
 	Toolbar,
 	ToolbarButton,
 	ToolbarGroup
 } from "@wordpress/components";
-import {button, styles as stylesIcon } from "@wordpress/icons";
+import { useState, useMemo, useRef } from '@wordpress/element';
+import {button, styles as stylesIcon, link, linkOff} from "@wordpress/icons";
 import {buttonFilled, stylesInverted} from "./assets/icons";
+import { __experimentalLinkControl as LinkControl } from "@wordpress/block-editor";
+import {getLinkClassNames} from "./utils";
+import {displayShortcut} from "@wordpress/keycodes";
 
 export default function Edit({ attributes, setAttributes }) {
 
-	const { text, style, variant } = attributes;
+	const richTextRef = useRef();
+
+	const { text, style, variant, url } = attributes;
+
+	// Use internal state instead of a ref to make sure that the component
+	// re-renders when the popover's anchor updates.
+	const [isEditingURL, setIsEditingURL] = useState( false );
+
+	const linkValue = useMemo(
+		() => ({url}),
+		[url]
+	);
+
+	function startEditingURL() {
+		setIsEditingURL( (state) => !state);
+	}
+
+	function unlink() {
+		setAttributes({
+			url: undefined,
+		});
+		setIsEditingURL(false);
+	}
+
+	const linkStyles = getLinkClassNames(style, variant);
 
 	return (
-		<div { ...useBlockProps() }>
-			<BlockControls>
-				<Toolbar>
-					<ToolbarGroup>
-						<ToolbarButton icon={ buttonFilled } label="Fill" onClick={() => setAttributes({style: 'fill'})} isActive={style === 'fill'} />
-						<ToolbarButton icon={ button } label="Outline" onClick={() => setAttributes({style: 'outline'})} isActive={style === 'outline'} />
-					</ToolbarGroup>
-					<ToolbarGroup>
-						<ToolbarButton icon={ stylesIcon } label="Normal" onClick={() => setAttributes({variant: 'normal'})} isActive={variant === 'normal'} />
-						<ToolbarButton icon={ stylesInverted } label="Inverted" onClick={() => setAttributes({variant: 'inverted'})} isActive={variant === 'inverted'} />
-					</ToolbarGroup>
-				</Toolbar>
-			</BlockControls>
+		<>
+			<div { ...useBlockProps() }>
+				<a className={linkStyles}>
+					<RichText
+						ref={richTextRef}
+						tagName="p"
+						value={text}
+						onChange={(text) => setAttributes({text})}
+						allowedFormats={[]}
+						placeholder={__('Add text...', 'custom-gutenberg-blocks')}
+					/>
+				</a>
+			</div>
+					<BlockControls>
+						<Toolbar>
+							<ToolbarGroup label="Style">
+								<ToolbarButton icon={ buttonFilled } label="Fill" onClick={() => setAttributes({style: 'fill'})} isActive={style === 'fill'} />
+								<ToolbarButton icon={ button } label="Outline" onClick={() => setAttributes({style: 'outline'})} isActive={style === 'outline'} />
+							</ToolbarGroup>
+						</Toolbar>
+						<Toolbar>
+							<ToolbarGroup label="Variant">
+								<ToolbarButton icon={ stylesIcon } label="Normal" onClick={() => setAttributes({variant: 'normal'})} isActive={variant === 'normal'} />
+								<ToolbarButton icon={ stylesInverted } label="Inverted" onClick={() => setAttributes({variant: 'inverted'})} isActive={variant === 'inverted'} />
+							</ToolbarGroup>
+						</Toolbar>
+						<Toolbar>
+							<ToolbarGroup label="Link">
+								{!url && (
+									<ToolbarButton icon={ link } label="Link" shortcut={ displayShortcut.primary( 'k' ) } onClick={startEditingURL} />
+								)}
+								{!!url && (
+									<ToolbarButton icon={ linkOff } label="Unlink" onClick={startEditingURL} shortcut={ displayShortcut.primaryShift( 'k' ) } isActive />
+								)}
+							</ToolbarGroup>
+						</Toolbar>
+					</BlockControls>
 
-			<RichText
-				tagName="p"
-				className="mb-4"
-				value={text}
-				onChange={(text) => setAttributes({text})}
-				placeholder={__('Add text...', 'custom-gutenberg-blocks')}
-			/>
-		</div>
+					{isEditingURL && (
+						<Popover
+							placement="bottom"
+							onClose={() => {
+								setIsEditingURL(false);
+								richTextRef.current?.focus();
+							}}
+							// necessary for it to close when you click outside the popover
+							__unstableSlotName="__unstable-block-tools-after"
+						>
+							<LinkControl
+								value={linkValue}
+								onChange={(linkValue) => { setAttributes({ url: linkValue.url }); }}
+								onRemove={() => {
+									unlink();
+									richTextRef.current?.focus();
+								}}
+							></LinkControl>
+						</Popover>
+					)}
+		</>
 	);
 }
