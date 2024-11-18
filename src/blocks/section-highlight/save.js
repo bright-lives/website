@@ -1,6 +1,5 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { InnerBlocks } from '@wordpress/block-editor';
-import {style} from "./style";
 
 export default function save({ attributes }) {
 	const { title, content, imageUrl, imageAlt } = attributes;

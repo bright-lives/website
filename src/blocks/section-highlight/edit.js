@@ -14,7 +14,6 @@ import { __ } from '@wordpress/i18n';
 import {InnerBlocks, MediaUpload, RichText, useBlockProps} from '@wordpress/block-editor';
 import {Button, Flex, FlexItem, IconButton, Placeholder} from '@wordpress/components';
 import {edit, trash, image} from '@wordpress/icons';
-import {style} from "./style";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -29,6 +28,8 @@ export default function Edit({ attributes, setAttributes }) {
 	const blockProps = useBlockProps();
 
 	const ALLOWED_MEDIA_TYPES = ['image'];
+	const ALLOWED_INNER_BLOCKS = ['bright-lives/button'];
+	const INNER_BLOCK_TEMPLATE = ['bright-lives/button', { placeholder: 'foobar' }];
 
 	const onRemoveImage = () => {
 		setAttributes({ imageUrl: '', imageAlt: '' });
@@ -52,7 +53,11 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(content) => setAttributes({content})}
 						placeholder={__('Enter content here', 'custom-gutenberg-blocks')}
 					/>
-					<InnerBlocks />
+					<InnerBlocks
+						templateLock={ALLOWED_INNER_BLOCKS}
+						template={[INNER_BLOCK_TEMPLATE]}
+						directInsert
+					/>
 				</FlexItem>
 				<FlexItem className="w-1/3">
 					{attributes.imageUrl ? (
