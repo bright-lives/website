@@ -167,7 +167,7 @@ module.exports = window["wp"]["i18n"];
   \************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/hero","version":"0.1.0","title":"Hero","category":"media","icon":"cover-image","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"hero","editorScript":"file:./index.js","viewScript":["file:./view.js","hero-view-script"],"attributes":{"title":{"type":"string","source":"html","selector":"[data-id=\'hero-title\']","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/hero","version":"0.1.0","title":"Hero","category":"media","icon":"cover-image","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false,"align":false},"textdomain":"hero","editorScript":"file:./index.js","viewScript":["file:./view.js","hero-view-script"],"attributes":{"title":{"type":"string","source":"html","selector":"[data-id=\'hero-title\']","default":""}}}');
 
 /***/ })
 

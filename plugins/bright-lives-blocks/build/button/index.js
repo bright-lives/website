@@ -289,7 +289,6 @@ function save({
     url
   } = attributes;
   const linkStyles = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getLinkClassNames)(style, variant);
-  console.log('==> ', linkStyles);
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
     className: linkStyles,
     href: url
@@ -563,7 +562,7 @@ module.exports = window["wp"]["primitives"];
   \**************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/button","version":"0.1.0","title":"Button","category":"design","icon":"button","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"button","editorScript":"file:./index.js","viewScript":["file:./view.js","button-view-script"],"attributes":{"text":{"type":"string","default":""},"url":{"type":"string","source":"attribute","selector":"a","attribute":"href","role":"content"},"style":{"enum":["fill","outline"],"default":"fill"},"variant":{"enum":["normal","inverted"],"default":"normal"}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/button","version":"0.1.0","title":"Button","category":"design","icon":"button","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false,"align":false},"textdomain":"button","editorScript":"file:./index.js","viewScript":["file:./view.js","button-view-script"],"attributes":{"text":{"type":"string","default":""},"url":{"type":"string","source":"attribute","selector":"a","attribute":"href","role":"content"},"style":{"enum":["fill","outline"],"default":"fill"},"variant":{"enum":["normal","inverted"],"default":"normal"}}}');
 
 /***/ })
 

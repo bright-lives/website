@@ -1,24 +1,36 @@
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { InnerBlocks } from '@wordpress/block-editor';
+import {style} from "./style";
 
-/**
- * The save function defines the way in which the different attributes should
- * be combined into the final markup, which is then serialized by the block
- * editor into `post_content`.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
- *
- * @return {Element} Element to render.
- */
-export default function save() {
+export default function save({ attributes }) {
+	const { title, content, imageUrl, imageAlt } = attributes;
+
+	const blockProps = useBlockProps.save({
+		className: 'bg-radial-gradient',
+	})
+
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Section Highlight – hello from the saved content!' }
-		</p>
+		<div {...blockProps}>
+			<article className='container mx-auto grid grid-cols-1 md:grid-cols-2'>
+				<div className="flex items-center">
+					<div className="font-sans-serif max-w-lg">
+						<RichText.Content
+							tagName="h2"
+							className="text-4xl leading-normal font-serif mb-6"
+							value={title}
+						/>
+						<RichText.Content
+							tagName="p"
+							className="mb-4"
+							value={content}
+						/>
+						<InnerBlocks.Content />
+					</div>
+				</div>
+				<div className="pt-24">
+					<img src={imageUrl} alt={imageAlt} />
+				</div>
+			</article>
+		</div>
 	);
 }

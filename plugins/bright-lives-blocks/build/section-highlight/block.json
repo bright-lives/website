@@ -9,7 +9,8 @@
   "description": "Example block scaffolded with Create Block tool.",
   "example": {},
   "supports": {
-    "html": false
+    "html": false,
+    "align": false
   },
   "textdomain": "section-highlight",
   "editorScript": "file:./index.js",
@@ -33,6 +34,10 @@
       "default": ""
     },
     "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageAlt": {
       "type": "string",
       "default": ""
     }
