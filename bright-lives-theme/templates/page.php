@@ -11,7 +11,7 @@
  <html <?php language_attributes(); ?>>
  <?php get_header(); ?>
  <body <?php body_class(); ?>>
-<!-- //get_template_part( 'template-parts/page-header/page-header' ); ?-->
+<?php get_template_part( 'template-parts/page-header/page-header' ); ?>
 
  <main class="pb-20">
    <?php the_content(); ?>

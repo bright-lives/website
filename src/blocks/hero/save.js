@@ -3,23 +3,36 @@ import {useBlockProps, useInnerBlocksProps, RichText} from "@wordpress/block-edi
 import {style} from "./style";
 
 export default function Save({attributes}) {
-  const { title } = attributes;
+  const { heroTitle, imageUrl, imageAlt, height } = attributes;
+
+  const styleHeightMap = {
+    'full': style.imageContainerHeightFull,
+    'fixed': style.imageContainerHeightFixed,
+  }
 
   const blockProps = useBlockProps.save({
-    className: style.heroWrapper,
+    className: `${style.heroWrapper} ${styleHeightMap[height]} grid [grid-template-areas:'stack']`,
   });
-  const innerBlocksProps = useInnerBlocksProps.save();
 
   return (
-    <div { ...blockProps }>
-      <RichText.Content
-        tagName="p"
-        data-id="hero-title"
-        className="mt-10"
-        value={ title }
-        placeholder={ __( 'Heading...' ) }
-      />
-      <div {...innerBlocksProps} />
+    <div {...blockProps}>
+      <div className="[grid-area:stack] z-20">
+        <div className={style.heroTitleContainer}>
+          <RichText.Content
+            tagName="p"
+            data-id="hero-title"
+            className={style.heroTitle}
+            value={heroTitle}
+            placeholder={__('Heading...', 'custom-gutenberg-blocks')}
+          />
+        </div>
+      </div>
+      <div className="[grid-area:stack] inset-0 bg-radial-gradient-opacity z-10" />
+      <div className="[grid-area:stack] z-0">
+        <div className={style.imageContainer}>
+          <img src={imageUrl} alt={imageAlt}/>
+        </div>
+      </div>
     </div>
   );
 }

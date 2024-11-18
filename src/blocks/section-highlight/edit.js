@@ -1,35 +1,16 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
 import { __ } from '@wordpress/i18n';
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
 import {InnerBlocks, MediaUpload, RichText, useBlockProps} from '@wordpress/block-editor';
 import {Button, Flex, FlexItem, IconButton, Placeholder} from '@wordpress/components';
 import {edit, trash, image} from '@wordpress/icons';
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {Element} Element to render.
- */
 export default function Edit({ attributes, setAttributes }) {
-
-	const blockProps = useBlockProps();
 
 	const ALLOWED_MEDIA_TYPES = ['image'];
 	const ALLOWED_INNER_BLOCKS = ['bright-lives/button'];
 	const INNER_BLOCK_TEMPLATE = ['bright-lives/button', { placeholder: 'foobar' }];
+
+	const blockProps = useBlockProps();
 
 	const onRemoveImage = () => {
 		setAttributes({ imageUrl: '', imageAlt: '' });
@@ -62,7 +43,7 @@ export default function Edit({ attributes, setAttributes }) {
 				<FlexItem className="w-1/3">
 					{attributes.imageUrl ? (
 						<div className="grid grid-cols-1 grid-rows-1">
-							<div className="col-start-1 row-start-1 flex justify-end m-2">
+							<div className="col-start-1 row-start-1 flex justify-end">
 								<MediaUpload
 									onSelect={(media) => setAttributes({ imageUrl: media.url, imageAlt: media.alt })}
 									allowedTypes={ALLOWED_MEDIA_TYPES}

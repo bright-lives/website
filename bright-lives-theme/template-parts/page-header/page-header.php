@@ -3,7 +3,7 @@
     $menu_items = wp_get_nav_menu_items($menu_name);
 ?>
 
-<header class="absolute pt-6 w-full z-10">
+<header class="absolute pt-6 w-full z-30">
     <div class="container mx-auto flex">
         <div class="mr-auto">
             <div class="p-4">

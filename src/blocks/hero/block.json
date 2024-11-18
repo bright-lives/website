@@ -16,10 +16,22 @@
 	"editorScript": "file:./index.js",
 	"viewScript": ["file:./view.js", "hero-view-script"],
 	"attributes": {
-		"title": {
+		"heroTitle": {
 			"type": "string",
 			"source": "html",
 			"selector": "[data-id='hero-title']",
+			"default": ""
+		},
+		"height": {
+			"enum": ["full", "fixed"],
+			"default": "full"
+		},
+		"imageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"imageAlt": {
+			"type": "string",
 			"default": ""
 		}
 	}

@@ -26,10 +26,6 @@
 			"type": "string",
 			"default": ""
 		},
-		"buttonText": {
-			"type": "string",
-			"default": ""
-		},
 		"imageUrl": {
 			"type": "string",
 			"default": ""
