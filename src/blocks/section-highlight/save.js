@@ -8,7 +8,7 @@ export default function save({ attributes }) {
 		className: 'bg-radial-gradient',
 	});
 
-	const innerBlocksProps = useInnerBlocksProps.save();
+	// const innerBlocksProps = useInnerBlocksProps.save();
 
 	return (
 		<div {...blockProps}>
@@ -25,9 +25,7 @@ export default function save({ attributes }) {
 							className="mb-4"
 							value={content}
 						/>
-						<div {...innerBlocksProps}>
-							<InnerBlocks.Content />
-						</div>
+						<InnerBlocks.Content />
 					</div>
 				</div>
 				<div className="pt-24">

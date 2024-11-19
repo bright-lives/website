@@ -33,11 +33,12 @@ function Edit({
   setAttributes
 }) {
   const ALLOWED_MEDIA_TYPES = ['image'];
-  const ALLOWED_INNER_BLOCKS = ['bright-lives/button'];
+  const ALLOWED_BLOCKS = ['bright-lives/button'];
   const INNER_BLOCK_TEMPLATE = ['bright-lives/button', {
-    placeholder: 'foobar'
+    style: 'outline'
   }];
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
+  const innerBlockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps)();
   const onRemoveImage = () => {
     setAttributes({
       imageUrl: '',
@@ -65,10 +66,12 @@ function Edit({
             content
           }),
           placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enter content here', 'custom-gutenberg-blocks')
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
-          templateLock: ALLOWED_INNER_BLOCKS,
-          template: [INNER_BLOCK_TEMPLATE],
-          directInsert: true
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          ...innerBlockProps,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
+            allowedBlocks: ALLOWED_BLOCKS,
+            template: [INNER_BLOCK_TEMPLATE]
+          })
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, {
         className: "w-1/3",
@@ -155,7 +158,9 @@ function save({
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
     className: 'bg-radial-gradient'
   });
-  const innerBlocksProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useInnerBlocksProps.save();
+
+  // const innerBlocksProps = useInnerBlocksProps.save();
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     ...blockProps,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
@@ -172,10 +177,7 @@ function save({
             tagName: "p",
             className: "mb-4",
             value: content
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            ...innerBlocksProps,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks.Content, {})
-          })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks.Content, {})]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "pt-24",
