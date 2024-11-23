@@ -1,24 +1,24 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "bright-lives/section-highlight",
+  "name": "bright-lives/column",
   "version": "0.1.0",
-  "title": "Section Highlight",
+  "title": "Column",
   "category": "design",
-  "icon": "align-pull-right",
-  "description": "A full width section with a title, description, button and image.",
+  "icon": "text",
+  "description": "A re-usable column.",
   "example": {},
   "supports": {
     "html": false,
     "align": false
   },
-  "textdomain": "section-highlight",
+  "textdomain": "column",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
   "viewScript": [
     "file:./view.js",
-    "section-highlight-view-script"
+    "column-view-script"
   ],
   "attributes": {
     "title": {
@@ -26,14 +26,6 @@
       "default": ""
     },
     "content": {
-      "type": "string",
-      "default": ""
-    },
-    "imageUrl": {
-      "type": "string",
-      "default": ""
-    },
-    "imageAlt": {
       "type": "string",
       "default": ""
     }

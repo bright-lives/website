@@ -39,6 +39,7 @@ export default function Edit({ attributes, setAttributes }) {
 						<InnerBlocks
 							allowedBlocks={ALLOWED_BLOCKS}
 							template={[INNER_BLOCK_TEMPLATE]}
+							templateLock="all"
 						/>
 					</div>
 				</FlexItem>

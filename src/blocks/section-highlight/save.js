@@ -1,5 +1,5 @@
-import {useBlockProps, RichText, useInnerBlocksProps} from '@wordpress/block-editor';
-import { InnerBlocks } from '@wordpress/block-editor';
+import {useBlockProps, RichText} from '@wordpress/block-editor';
+import {InnerBlocks} from '@wordpress/block-editor';
 
 export default function save({ attributes }) {
 	const { title, content, imageUrl, imageAlt } = attributes;
@@ -7,8 +7,6 @@ export default function save({ attributes }) {
 	const blockProps = useBlockProps.save({
 		className: 'bg-radial-gradient',
 	});
-
-	// const innerBlocksProps = useInnerBlocksProps.save();
 
 	return (
 		<div {...blockProps}>
