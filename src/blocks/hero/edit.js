@@ -22,6 +22,9 @@ export default function Edit({ attributes, setAttributes }) {
 		setAttributes({ imageUrl: '', imageAlt: '' });
 	};
 
+	const gridClass = attributes.imageUrl === '' ? 'grid-cols-12 gap-4 items-center' : '[grid-template-areas:"stack"]';
+	const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack]';
+
 	return (
 		<>
 			<BlockControls>
@@ -33,8 +36,8 @@ export default function Edit({ attributes, setAttributes }) {
 				</Toolbar>
 			</BlockControls>
 			<div { ...blockProps }>
-				<div className="grid [grid-template-areas:'stack']">
-					<div className="[grid-area:stack] z-30">
+				<div className={`grid ${gridClass}`}>
+					<div className={`${columnClass} z-30`}>
 						<div className={`${style.heroTitleContainer} px-8`}>
 							<RichText
 								tagName="p"
@@ -47,7 +50,7 @@ export default function Edit({ attributes, setAttributes }) {
 							/>
 						</div>
 					</div>
-					<div className="[grid-area:stack]">
+					<div className={`${columnClass}`}>
 						{attributes.imageUrl ? (
 							<div className="grid [grid-template-areas:'stack']">
 								<div className="[grid-area:stack] z-20">

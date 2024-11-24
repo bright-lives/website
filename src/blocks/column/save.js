@@ -1,10 +1,11 @@
 import {InnerBlocks, RichText, useBlockProps} from "@wordpress/block-editor";
+import {style} from "./style";
 
 export default function save({ attributes }) {
   const { title, content } = attributes;
 
   const blockProps = useBlockProps.save({
-    className: 'p-10 bg-primary-500',
+    className: style.getUpdatedColumnStyle(attributes.index),
   });
 
   return (

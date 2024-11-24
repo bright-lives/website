@@ -634,6 +634,10 @@ video {
   grid-column: span 3 / span 3;
 }
 
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+
 .col-start-1 {
   grid-column-start: 1;
 }
@@ -727,6 +731,10 @@ video {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -849,6 +857,10 @@ video {
 
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .grid-rows-1 {
@@ -1338,6 +1350,10 @@ video {
 
 .\[grid-area\:stack\] {
   grid-area: stack;
+}
+
+.\[grid-template-areas\:\"stack\"\] {
+  grid-template-areas: "stack";
 }
 
 .\[grid-template-areas\:\'stack\'\] {

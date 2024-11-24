@@ -1,5 +1,6 @@
 import {InnerBlocks, RichText, useBlockProps, useInnerBlocksProps} from "@wordpress/block-editor";
 import {__} from "@wordpress/i18n";
+import {style} from "./style";
 
 export default function Edit({attributes, setAttributes}) {
 
@@ -7,7 +8,7 @@ export default function Edit({attributes, setAttributes}) {
   const INNER_BLOCK_TEMPLATE = ['bright-lives/button', { style: 'fill' }];
 
   const blockProps = useBlockProps({
-    className: 'p-10 bg-primary-500',
+    className: style.column,
   });
   const innerBlockProps = useInnerBlocksProps();
 

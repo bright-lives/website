@@ -28,6 +28,10 @@
     "content": {
       "type": "string",
       "default": ""
+    },
+    "index": {
+      "type": "number",
+      "default": 0
     }
   }
 }
