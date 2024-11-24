@@ -1,5 +1,8 @@
+import {arrowRight} from "@wordpress/icons";
 import {useBlockProps} from '@wordpress/block-editor';
 import {getLinkClassNames} from "./utils";
+import {style as componentStyle} from './style';
+import {Icon} from "@wordpress/components";
 
 export default function save({attributes}) {
 	const { style, variant, text, url } = attributes;
@@ -13,7 +16,10 @@ export default function save({attributes}) {
 
 	return (
 		<a { ...blockProps }>
-			{ text }
+			<span className={componentStyle.textContainer}>{ text }</span>
+			<span className={componentStyle.iconContainer}>
+				<Icon icon={arrowRight} size="24"></Icon>
+			</span>
 		</a>
 	);
 }

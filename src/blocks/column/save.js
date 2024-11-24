@@ -17,7 +17,7 @@ export default function save({ attributes }) {
           value={title}
         />
       </div>
-      <div className="h-48">
+      <div className="min-h-48">
         <RichText.Content
           tagName="p"
           className="text-white"

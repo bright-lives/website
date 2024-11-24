@@ -29,7 +29,8 @@ function Edit({
 }) {
   const ALLOWED_BLOCKS = ['bright-lives/button'];
   const INNER_BLOCK_TEMPLATE = ['bright-lives/button', {
-    style: 'fill'
+    style: 'text',
+    variant: 'inverted'
   }];
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
     className: _style__WEBPACK_IMPORTED_MODULE_2__.style.column
@@ -41,7 +42,7 @@ function Edit({
       className: "h-28",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
         tagName: "h3",
-        className: "text-2xl font-heading text-white mb-4",
+        className: "text-xl font-heading text-white mb-1",
         value: attributes.title,
         onChange: title => setAttributes({
           title
@@ -49,7 +50,7 @@ function Edit({
         placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Enter title here', 'custom-gutenberg-blocks')
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: "h-48",
+      className: "min-h-48",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
         tagName: "p",
         className: "text-white",
@@ -110,7 +111,7 @@ function save({
         value: title
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "h-48",
+      className: "min-h-48",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
         tagName: "p",
         className: "text-white",

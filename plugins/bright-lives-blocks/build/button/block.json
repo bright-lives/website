@@ -33,7 +33,8 @@
     "style": {
       "enum": [
         "fill",
-        "outline"
+        "outline",
+        "text"
       ],
       "default": "fill"
     },

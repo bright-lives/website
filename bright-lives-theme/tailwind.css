@@ -733,6 +733,10 @@ video {
   margin-top: 5rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -795,6 +799,10 @@ video {
 
 .min-h-\[430px\] {
   min-height: 430px;
+}
+
+.min-h-48 {
+  min-height: 12rem;
 }
 
 .w-1\/3 {
@@ -1074,6 +1082,18 @@ video {
   background-position: center;
 }
 
+.fill-black {
+  fill: #000;
+}
+
+.fill-primary-500 {
+  fill: #833556;
+}
+
+.fill-white {
+  fill: #fff;
+}
+
 .p-10 {
   padding: 2.5rem;
 }
@@ -1348,6 +1368,20 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .\[grid-area\:stack\] {
   grid-area: stack;
 }
@@ -1368,6 +1402,10 @@ video {
 .last\:text-primary-500:last-child {
   --tw-text-opacity: 1;
   color: rgb(131 53 86 / var(--tw-text-opacity));
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
 }
 
 .hover\:border-black:hover {
@@ -1395,6 +1433,22 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:fill-primary-500:hover {
+  fill: #833556;
+}
+
+.hover\:fill-primary-800:hover {
+  fill: #461229;
+}
+
+.hover\:fill-white:hover {
+  fill: #fff;
+}
+
+.hover\:pl-4:hover {
+  padding-left: 1rem;
+}
+
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1420,8 +1474,17 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:text-primary-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(70 18 41 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.hover\:no-underline:hover {
+  text-decoration-line: none;
 }
 
 .focus\:outline-none:focus {
@@ -1438,6 +1501,10 @@ video {
 .focus\:ring-primary-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(131 53 86 / var(--tw-ring-opacity));
+}
+
+.group:hover .group-hover\:pl-4 {
+  padding-left: 1rem;
 }
 
 @media (min-width: 768px) {

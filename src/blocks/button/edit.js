@@ -1,16 +1,18 @@
 import { __ } from '@wordpress/i18n';
 import {BlockControls, RichText, useBlockProps} from '@wordpress/block-editor';
 import {
+	Icon,
 	Popover,
 	Toolbar,
 	ToolbarButton,
 	ToolbarGroup
 } from "@wordpress/components";
 import { useState, useMemo, useRef } from '@wordpress/element';
-import {button, styles as stylesIcon, link, linkOff} from "@wordpress/icons";
+import {button, styles as stylesIcon, link, linkOff, lineSolid, arrowRight} from "@wordpress/icons";
 import {buttonFilled, stylesInverted} from "./assets/icons";
 import { __experimentalLinkControl as LinkControl } from "@wordpress/block-editor";
 import {getLinkClassNames} from "./utils";
+import {style as componentStyle} from './style';
 import {displayShortcut} from "@wordpress/keycodes";
 
 export default function Edit({ attributes, setAttributes }) {
@@ -45,21 +47,27 @@ export default function Edit({ attributes, setAttributes }) {
 		<>
 			<div { ...useBlockProps() }>
 				<a className={linkStyles}>
-					<RichText
-						ref={richTextRef}
-						tagName="p"
-						value={text}
-						onChange={(text) => setAttributes({text})}
-						allowedFormats={[]}
-						placeholder={__('Add text...', 'custom-gutenberg-blocks')}
-					/>
+					<span className={componentStyle.textContainer}>
+						<RichText
+							ref={richTextRef}
+							tagName="p"
+							value={text}
+							onChange={(text) => setAttributes({text})}
+							allowedFormats={[]}
+							placeholder={__('Add text...', 'custom-gutenberg-blocks')}
+						/>
+					</span>
+					<span className={componentStyle.iconContainer}>
+						<Icon icon={arrowRight} size="24"></Icon>
+					</span>
 				</a>
 			</div>
-					<BlockControls>
-						<Toolbar>
-							<ToolbarGroup label="Style">
+			<BlockControls>
+				<Toolbar>
+					<ToolbarGroup label="Style">
 								<ToolbarButton icon={ buttonFilled } label="Fill" onClick={() => setAttributes({style: 'fill'})} isActive={style === 'fill'} />
 								<ToolbarButton icon={ button } label="Outline" onClick={() => setAttributes({style: 'outline'})} isActive={style === 'outline'} />
+								<ToolbarButton icon={ lineSolid } label="Text" onClick={() => setAttributes({style: 'text'})} isActive={style === 'text'} />
 							</ToolbarGroup>
 						</Toolbar>
 						<Toolbar>

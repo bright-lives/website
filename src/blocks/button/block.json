@@ -28,7 +28,7 @@
 			"role": "content"
 		},
 		"style": {
-			"enum": ["fill", "outline"],
+			"enum": ["fill", "outline", "text"],
 			"default": "fill"
 		},
 		"variant": {
