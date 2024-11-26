@@ -15,11 +15,13 @@
             </div>
         </div>
         <div class="md:hidden">
-            <button id="menu-toggle" class="p-4 text-white hover:text-primary-100">
+            <button id="menu-toggle" class="p-4">
                 <img src="<?php echo get_template_directory_uri() . '/assets/icons/bars-3.svg' ?>"
                      alt="menu icon"
                      width="30"
-                     height="30">
+                     height="30"
+                     class="text-white stroke-white hover:text-primary-100"
+                >
             </button>
         </div>
         <div id="menu" class="hidden md:block mt-12">

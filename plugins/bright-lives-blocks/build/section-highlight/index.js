@@ -159,14 +159,14 @@ function save({
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
     className: 'bg-radial-gradient'
   });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
     ...blockProps,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("article", {
       className: "container mx-auto grid grid-cols-1 md:grid-cols-2",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "flex items-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "font-sans-serif max-w-lg",
+          className: "font-sans-serif max-w-lg pt-20 sm:pt-0 px-8 sm:px-0",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
             tagName: "h2",
             className: "text-4xl leading-normal font-serif mb-6",
@@ -379,7 +379,7 @@ module.exports = window["wp"]["primitives"];
   \*************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-highlight","version":"0.1.0","title":"Section Highlight","category":"design","icon":"align-pull-right","description":"A full width section with a title, description, button and image.","example":{},"supports":{"html":false,"align":false},"textdomain":"section-highlight","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":["file:./view.js","section-highlight-view-script"],"attributes":{"title":{"type":"string","default":""},"content":{"type":"string","default":""},"imageUrl":{"type":"string","default":""},"imageAlt":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-highlight","version":"0.1.0","title":"Section Highlight","category":"theme","icon":"align-pull-right","description":"A full width section with a title, description, button and image.","example":{},"supports":{"html":false,"align":false},"textdomain":"section-highlight","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":["file:./view.js","section-highlight-view-script"],"attributes":{"title":{"type":"string","default":""},"content":{"type":"string","default":""},"imageUrl":{"type":"string","default":""},"imageAlt":{"type":"string","default":""}}}');
 
 /***/ })
 

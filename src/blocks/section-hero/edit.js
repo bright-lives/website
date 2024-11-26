@@ -4,7 +4,7 @@ import {useBlockProps, RichText, MediaUpload, BlockControls} from '@wordpress/bl
 import {Button, IconButton, Placeholder, Toolbar, ToolbarButton, ToolbarGroup} from "@wordpress/components";
 import {edit, image, trash} from "@wordpress/icons";
 import {fullScreen, fixedHeight} from "./assets/icons";
-import {style} from "./style";
+import {style, styleHeightMap} from "./style";
 
 export default function Edit({ attributes, setAttributes }) {
 
@@ -12,6 +12,7 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const blockProps = useBlockProps({
 		className: style.heroWrapper,
+		style: style.getBackgroundImageStyle(attributes.imageUrl),
 	});
 
 	const handleTitleChange = (newTitle) => {
@@ -22,7 +23,7 @@ export default function Edit({ attributes, setAttributes }) {
 		setAttributes({ imageUrl: '', imageAlt: '' });
 	};
 
-	const gridClass = attributes.imageUrl === '' ? 'grid-cols-12 gap-4 items-center' : '[grid-template-areas:"stack"]';
+	const gridClass = attributes.imageUrl === '' ? 'grid-cols-12 gap-4 items-center h-96' : '[grid-template-areas:"stack"]';
 	const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack]';
 
 	return (
@@ -42,7 +43,7 @@ export default function Edit({ attributes, setAttributes }) {
 							<RichText
 								tagName="p"
 								data-id="hero-title"
-								className={style.heroTitle}
+								className={style.heroTitle.replace('text-7xl', 'text-4xl')}
 								value={attributes.heroTitle}
 								allowedFormats={['core/bold', 'core/italic']}
 								onChange={handleTitleChange}
@@ -50,7 +51,7 @@ export default function Edit({ attributes, setAttributes }) {
 							/>
 						</div>
 					</div>
-					<div className={`${columnClass}`}>
+					<section className={`${columnClass}`}>
 						{attributes.imageUrl ? (
 							<div className="grid [grid-template-areas:'stack']">
 								<div className="[grid-area:stack] z-20">
@@ -77,9 +78,7 @@ export default function Edit({ attributes, setAttributes }) {
 								</div>
 								<div className="[grid-area:stack] inset-0 bg-radial-gradient-opacity z-10" />
 								<div className="[grid-area:stack] z-0">
-									<div className={style.imageContainer}>
-										<img src={attributes.imageUrl} alt={attributes.imageUrl} className="w-full"/>
-									</div>
+									<div className={`${style.imageContainer}`}/>
 								</div>
 							</div>
 						) : (
@@ -98,7 +97,7 @@ export default function Edit({ attributes, setAttributes }) {
 								)}
 							/>
 						)}
-					</div>
+					</section>
 				</div>
 			</div>
 		</>

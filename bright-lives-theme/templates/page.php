@@ -13,7 +13,7 @@
  <body <?php body_class(); ?>>
 <?php get_template_part( 'template-parts/page-header/page-header' ); ?>
 
- <main class="pb-20">
+ <main>
    <?php the_content(); ?>
  </main>
  <?php get_template_part( 'template-parts/page-footer/page-footer' ); ?>

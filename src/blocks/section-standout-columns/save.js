@@ -10,7 +10,7 @@ export default function save({ attributes }) {
 
   return (
     <section {...blockProps} className="container mx-auto pt-24">
-      <div className="flex mb-6">
+      <div className="flex mb-6 px-8 sm:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <RichText.Content
             tagName="h2"

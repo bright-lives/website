@@ -9,10 +9,10 @@ export default function save({ attributes }) {
 	});
 
 	return (
-		<div {...blockProps}>
+		<section {...blockProps}>
 			<article className='container mx-auto grid grid-cols-1 md:grid-cols-2'>
 				<div className="flex items-center">
-					<div className="font-sans-serif max-w-lg">
+					<div className="font-sans-serif max-w-lg pt-20 sm:pt-0 px-8 sm:px-0">
 						<RichText.Content
 							tagName="h2"
 							className="text-4xl leading-normal font-serif mb-6"
@@ -30,6 +30,6 @@ export default function save({ attributes }) {
 					<img src={imageUrl} alt={imageAlt} />
 				</div>
 			</article>
-		</div>
+		</section>
 	);
 }

@@ -4,7 +4,7 @@
 	"name": "bright-lives/hero",
 	"version": "0.1.0",
 	"title": "Hero",
-	"category": "media",
+	"category": "theme",
 	"icon": "cover-image",
 	"description": "Example block scaffolded with Create Block tool.",
 	"example": {},

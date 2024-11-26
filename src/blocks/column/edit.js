@@ -2,7 +2,7 @@ import {InnerBlocks, RichText, useBlockProps, useInnerBlocksProps} from "@wordpr
 import {__} from "@wordpress/i18n";
 import {style} from "./style";
 
-export default function Edit({attributes, setAttributes}) {
+export default function edit({attributes, setAttributes}) {
 
   const ALLOWED_BLOCKS = ['bright-lives/button'];
   const INNER_BLOCK_TEMPLATE = ['bright-lives/button', { style: 'text', variant: 'inverted' }];

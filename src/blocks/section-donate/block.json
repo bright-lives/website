@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bright-lives/donate",
+  "version": "0.1.0",
+  "title": "Donate section",
+  "category": "theme",
+  "icon": "money-alt",
+  "description": "A full width section with a title, description and the call to action for donations",
+  "example": {},
+  "supports": {
+    "html": false,
+    "align": false
+  },
+  "textdomain": "donate",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": ["file:./view.js", "standout-columns-view-script"],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "subTitle": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}
