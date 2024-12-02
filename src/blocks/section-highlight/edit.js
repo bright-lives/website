@@ -1,8 +1,8 @@
 import { __ } from '@wordpress/i18n';
 
-import {InnerBlocks, MediaUpload, RichText, useBlockProps, useInnerBlocksProps} from '@wordpress/block-editor';
-import {Button, Flex, FlexItem, IconButton, Placeholder} from '@wordpress/components';
-import {edit, trash, image} from '@wordpress/icons';
+import {InnerBlocks, RichText, useBlockProps, useInnerBlocksProps} from '@wordpress/block-editor';
+import {Flex, FlexItem} from '@wordpress/components';
+import {MediaUploader} from "../__components__/MediaUploader/MediaUploader";
 
 export default function Edit({ attributes, setAttributes }) {
 
@@ -17,6 +17,10 @@ export default function Edit({ attributes, setAttributes }) {
 		setAttributes({ imageUrl: '', imageAlt: '' });
 	};
 
+	const onSelectImage = (media) => {
+		setAttributes({ imageUrl: media.url, imageAlt: media.alt })
+	}
+
 	return (
 		<div {...blockProps}>
 			<Flex>
@@ -30,7 +34,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 					<RichText
 						tagName="p"
-						className="mb-4"
+						className="mb-6"
 						value={attributes.content}
 						onChange={(content) => setAttributes({content})}
 						placeholder={__('Enter content here', 'custom-gutenberg-blocks')}
@@ -44,46 +48,12 @@ export default function Edit({ attributes, setAttributes }) {
 					</div>
 				</FlexItem>
 				<FlexItem className="w-1/3">
-					{attributes.imageUrl ? (
-						<div className="grid grid-cols-1 grid-rows-1">
-							<div className="col-start-1 row-start-1 flex justify-end">
-								<MediaUpload
-									onSelect={(media) => setAttributes({ imageUrl: media.url, imageAlt: media.alt })}
-									allowedTypes={ALLOWED_MEDIA_TYPES}
-									render={({ open }) => (
-										<>
-											<IconButton
-												icon={edit}
-												label={__('Edit image', 'custom-gutenberg-blocks')}
-												onClick={open}
-											/>
-											<IconButton
-												icon={trash}
-												label={__('Remove image', 'custom-gutenberg-blocks')}
-												onClick={onRemoveImage}
-											/>
-										</>
-									)}
-								/>
-							</div>
-							<img src={attributes.imageUrl} alt={attributes.imageUrl} className="col-start-1 row-start-1 w-full"/>
-						</div>
-					) : (
-						<MediaUpload
-							onSelect={(media) => setAttributes({
-								imageUrl: media.url,
-								imageAlt: media.alt,
-							})}
-							allowedTypes={ALLOWED_MEDIA_TYPES}
-							render={({open}) => (
-								<Placeholder icon={image} label={__('Image', 'custom-gutenberg-blocks')}>
-									<Button variant="primary" onClick={open}>
-										{__('Open Media Library', 'custom-gutenberg-blocks')}
-									</Button>
-								</Placeholder>
-							)}
-						/>
-					)}
+					<MediaUploader
+						imageUrl={attributes.imageUrl}
+						onSelectImage={onSelectImage}
+						onRemoveImage={onRemoveImage}
+						allowedMediaTypes={ALLOWED_MEDIA_TYPES}
+					/>
 				</FlexItem>
 			</Flex>
 		</div>

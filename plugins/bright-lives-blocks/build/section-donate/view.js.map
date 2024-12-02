@@ -1,0 +1,1 @@
+{"version":3,"file":"section-donate/view.js","mappings":";;;;AAAA;AACAA,OAAO,CAACC,GAAG,CAAC,0DAA0D,CAAC;AACvE,8B","sources":["webpack:///./src/blocks/section-donate/view.js"],"sourcesContent":["/* eslint-disable no-console */\nconsole.log(\"Hello World! (from bright-lives-standout section donate)\");\n/* eslint-enable no-console */\n"],"names":["console","log"],"sourceRoot":""}

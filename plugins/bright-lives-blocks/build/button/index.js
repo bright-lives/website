@@ -357,7 +357,7 @@ const style = {
     },
     outline: {
       normal: 'p-4 border-2 text-black fill-black border-black hover:text-primary-500 hover:fill-text-primary-500 hover:border-primary-500',
-      inverted: 'p-4 border-2 text-white fill-white border-white hover:text-primary-500 hover:fill-primary-500 hover:border-primary-500'
+      inverted: 'p-4 border-2 text-white fill-white border-white hover:text-primary-900 hover:fill-primary-900 hover:border-primary-900'
     },
     text: {
       normal: 'py-4 text-primary-500 fill-primary-500 hover:text-primary-800 hover:fill-primary-800',

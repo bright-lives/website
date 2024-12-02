@@ -4,7 +4,9 @@ import {useBlockProps, RichText, MediaUpload, BlockControls} from '@wordpress/bl
 import {Button, IconButton, Placeholder, Toolbar, ToolbarButton, ToolbarGroup} from "@wordpress/components";
 import {edit, image, trash} from "@wordpress/icons";
 import {fullScreen, fixedHeight} from "./assets/icons";
-import {style, styleHeightMap} from "./style";
+import {style} from "./style";
+import {mediaUploaderStyle} from "../__components__/MediaUploader/style";
+import {MediaUploader} from "../__components__/MediaUploader/MediaUploader";
 
 export default function Edit({ attributes, setAttributes }) {
 
@@ -12,19 +14,19 @@ export default function Edit({ attributes, setAttributes }) {
 
 	const blockProps = useBlockProps({
 		className: style.heroWrapper,
-		style: style.getBackgroundImageStyle(attributes.imageUrl),
+		style: mediaUploaderStyle.getBackgroundCoverImage(attributes.imageUrl),
 	});
 
 	const handleTitleChange = (newTitle) => {
 		setAttributes({ heroTitle: newTitle })
 	}
 
-	const onRemoveImage = () => {
-		setAttributes({ imageUrl: '', imageAlt: '' });
-	};
+	const onSelectImage = (media) => setAttributes({imageUrl: media.url, imageAlt: media.alt});
+
+	const onRemoveImage = () => setAttributes({ imageUrl: '', imageAlt: '' });
 
 	const gridClass = attributes.imageUrl === '' ? 'grid-cols-12 gap-4 items-center h-96' : '[grid-template-areas:"stack"]';
-	const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack]';
+	const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack] h-80';
 
 	return (
 		<>
@@ -52,51 +54,13 @@ export default function Edit({ attributes, setAttributes }) {
 						</div>
 					</div>
 					<section className={`${columnClass}`}>
-						{attributes.imageUrl ? (
-							<div className="grid [grid-template-areas:'stack']">
-								<div className="[grid-area:stack] z-20">
-									<div className="flex justify-end m-2">
-										<MediaUpload
-											onSelect={(media) => setAttributes({imageUrl: media.url, imageAlt: media.alt})}
-											allowedTypes={ALLOWED_MEDIA_TYPES}
-											render={({open}) => (
-												<>
-													<IconButton
-														icon={edit}
-														label={__('Edit image', 'custom-gutenberg-blocks')}
-														onClick={open}
-													/>
-													<IconButton
-														icon={trash}
-														label={__('Remove image', 'custom-gutenberg-blocks')}
-														onClick={onRemoveImage}
-													/>
-												</>
-											)}
-										/>
-									</div>
-								</div>
-								<div className="[grid-area:stack] inset-0 bg-radial-gradient-opacity z-10" />
-								<div className="[grid-area:stack] z-0">
-									<div className={`${style.imageContainer}`}/>
-								</div>
-							</div>
-						) : (
-							<MediaUpload
-								onSelect={(media) => setAttributes({
-									imageUrl: media.url,
-									imageAlt: media.alt,
-								})}
-								allowedTypes={ALLOWED_MEDIA_TYPES}
-								render={({open}) => (
-									<Placeholder icon={image} label={__('Image', 'custom-gutenberg-blocks')}>
-										<Button variant="primary" onClick={open}>
-											{__('Open Media Library', 'custom-gutenberg-blocks')}
-										</Button>
-									</Placeholder>
-								)}
-							/>
-						)}
+						<MediaUploader
+							imageUrl={attributes.imageUrl}
+							onSelectImage={onSelectImage}
+							onRemoveImage={onRemoveImage}
+							allowedMediaTypes={ALLOWED_MEDIA_TYPES}
+							imageOverlay={true}
+						/>
 					</section>
 				</div>
 			</div>

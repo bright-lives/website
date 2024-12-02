@@ -6,11 +6,6 @@ export const style = {
   imageContainerHeightFull: 'h-screen',
   imageContainerHeightFixed: 'h-60vh max-h-[500px]',
   image: 'h-full',
-  getBackgroundImageStyle: (imageUrl) => ({
-    backgroundImage: `url(${imageUrl})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  }),
 };
 
 export const styleHeightMap = {

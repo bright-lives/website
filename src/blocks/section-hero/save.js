@@ -1,13 +1,14 @@
 import { __ } from '@wordpress/i18n';
 import {useBlockProps, RichText} from "@wordpress/block-editor";
 import {style, styleHeightMap} from "./style";
+import {mediaUploaderStyle} from "../__components__/MediaUploader/style";
 
 export default function Save({attributes}) {
   const { heroTitle, height } = attributes;
 
   const blockProps = useBlockProps.save({
     className: `${style.heroWrapper} grid [grid-template-areas:'stack']`,
-    style: style.getBackgroundImageStyle(attributes.imageUrl),
+    style: mediaUploaderStyle.getBackgroundCoverImage(attributes.imageUrl),
   });
 
   return (
