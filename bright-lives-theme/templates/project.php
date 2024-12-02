@@ -51,7 +51,7 @@
                     <p class="font-sans-serif mb-4">
                         Het programma voorziet de kinderen van een basiszorgverzekering om medische zorg te garanderen.
                         Daarnaast biedt de Wa Yiri Residence een veilige leefomgeving met toezicht en voorzieningen
-                        zoals slaapkamers, badkamers, en een keuken
+                        zoals slaapkamers, badkamers, en een keuken.
                     </p>
                 </div>
 <!--                <div  class="p-14 bg-primary-600 text-white">-->

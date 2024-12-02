@@ -11,14 +11,17 @@ export default function Save({attributes}) {
     style: mediaUploaderStyle.getBackgroundCoverImage(attributes.imageUrl),
   });
 
+  const heroTitleContainerClass = attributes.height === 'full' ? style.heroTitleContainerFullScreen : style.heroTitleContainerFixedHeight;
+  const heroTitleClass = `${style.heroTitle} ${(attributes.height === 'fixed' ? 'mb-12' : '')}`;
+
   return (
     <section {...blockProps}>
       <div className="[grid-area:stack] z-20">
-        <div className={style.heroTitleContainer}>
+        <div className={heroTitleContainerClass}>
           <RichText.Content
             tagName="p"
             data-id="hero-title"
-            className={style.heroTitle}
+            className={heroTitleClass}
             value={heroTitle}
             placeholder={__('Heading...', 'custom-gutenberg-blocks')}
           />

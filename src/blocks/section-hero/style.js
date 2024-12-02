@@ -1,7 +1,8 @@
 export const style = {
   heroWrapper: 'bg-amber-200',
-  heroTitleContainer: 'container my-auto flex h-full items-center',
-  heroTitle: 'text-white text-4xl lg:text-7xl leading-normal font-display pt-20 px-8 sm:px-0',
+  heroTitleContainerFullScreen: 'container my-auto flex h-full items-center',
+  heroTitleContainerFixedHeight: 'container my-auto flex h-full items-end',
+  heroTitle: 'text-white text-4xl lg:text-7xl !leading-normal font-display',
   imageContainer: 'bg-radial-gradient-opacity min-h-[430px]',
   imageContainerHeightFull: 'h-screen',
   imageContainerHeightFixed: 'h-60vh max-h-[500px]',

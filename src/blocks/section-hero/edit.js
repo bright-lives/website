@@ -28,6 +28,10 @@ export default function Edit({ attributes, setAttributes }) {
 	const gridClass = attributes.imageUrl === '' ? 'grid-cols-12 gap-4 items-center h-96' : '[grid-template-areas:"stack"]';
 	const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack] h-[50vh]';
 
+	const heroTitleContainerClass = attributes.height === 'full' ? style.heroTitleContainerFullScreen : style.heroTitleContainerFixedHeight;
+	const heroTitleClass = `${style.heroTitle} ${(attributes.height === 'fixed' ? 'mb-12' : '')}`;
+
+
 	return (
 		<>
 			<BlockControls>
@@ -41,11 +45,11 @@ export default function Edit({ attributes, setAttributes }) {
 			<div { ...blockProps }>
 				<div className={`grid ${gridClass}`}>
 					<div className={`${columnClass} z-30`}>
-						<div className={`${style.heroTitleContainer} px-8`}>
+						<div className={`${heroTitleContainerClass} px-8`}>
 							<RichText
 								tagName="p"
 								data-id="hero-title"
-								className={style.heroTitle.replace('text-7xl', 'text-4xl')}
+								className={heroTitleClass.replace('text-7xl', 'text-4xl')}
 								value={attributes.heroTitle}
 								allowedFormats={['core/bold', 'core/italic']}
 								onChange={handleTitleChange}

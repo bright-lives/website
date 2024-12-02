@@ -39,6 +39,9 @@ function Edit({
     const block = select('core/block-editor')?.getBlock(clientId);
     return block ? block.innerBlocks : [];
   }, []);
+  setAttributes({
+    amountOfColumns: innerBlockCount.length
+  });
   innerBlockCount.forEach((block, index) => {
     updateBlockAttributes(block.clientId, {
       index
@@ -106,15 +109,16 @@ function save({
   attributes
 }) {
   const {
-    title
+    title,
+    amountOfColumns
   } = attributes;
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
-    className: ''
+    className: `container mx-auto ${attributes.title ? 'pt-24' : ''}`
   });
+  const gridColsClass = `md:grid-cols-${amountOfColumns}`;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
     ...blockProps,
-    className: "container mx-auto pt-24",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: [attributes.title && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "flex mb-6 px-8 sm:px-0",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "grid grid-cols-1 md:grid-cols-2",
@@ -125,7 +129,7 @@ function save({
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "grid grid-cols-1 md:grid-cols-4",
+      className: `grid grid-cols-1 ${gridColsClass}`,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks.Content, {})
     })]
   });
@@ -189,7 +193,7 @@ module.exports = window["wp"]["i18n"];
   \********************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/standout-columns","version":"0.1.0","title":"Standout Columns","category":"theme","icon":"columns","description":"A full width section with a title and columns that have a colored background.","example":{},"supports":{"html":false,"align":false},"textdomain":"standout-columns","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":["file:./view.js","standout-columns-view-script"],"attributes":{"title":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/standout-columns","version":"0.1.0","title":"Standout Columns","category":"theme","icon":"columns","description":"A full width section with a title and columns that have a colored background.","example":{},"supports":{"html":false,"align":false},"textdomain":"standout-columns","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":["file:./view.js","standout-columns-view-script"],"attributes":{"title":{"type":"string","default":""},"amountOfColumns":{"type":"number","default":0}}}');
 
 /***/ })
 

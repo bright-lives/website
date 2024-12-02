@@ -267,6 +267,8 @@ function Edit({
   });
   const gridClass = attributes.imageUrl === '' ? 'grid-cols-12 gap-4 items-center h-96' : '[grid-template-areas:"stack"]';
   const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack] h-[50vh]';
+  const heroTitleContainerClass = attributes.height === 'full' ? _style__WEBPACK_IMPORTED_MODULE_4__.style.heroTitleContainerFullScreen : _style__WEBPACK_IMPORTED_MODULE_4__.style.heroTitleContainerFixedHeight;
+  const heroTitleClass = `${_style__WEBPACK_IMPORTED_MODULE_4__.style.heroTitle} ${attributes.height === 'fixed' ? 'mb-12' : ''}`;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Toolbar, {
@@ -296,11 +298,11 @@ function Edit({
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           className: `${columnClass} z-30`,
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-            className: `${_style__WEBPACK_IMPORTED_MODULE_4__.style.heroTitleContainer} px-8`,
+            className: `${heroTitleContainerClass} px-8`,
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
               tagName: "p",
               "data-id": "hero-title",
-              className: _style__WEBPACK_IMPORTED_MODULE_4__.style.heroTitle.replace('text-7xl', 'text-4xl'),
+              className: heroTitleClass.replace('text-7xl', 'text-4xl'),
               value: attributes.heroTitle,
               allowedFormats: ['core/bold', 'core/italic'],
               onChange: handleTitleChange,
@@ -358,16 +360,18 @@ function Save({
     className: `${_style__WEBPACK_IMPORTED_MODULE_2__.style.heroWrapper} grid [grid-template-areas:'stack']`,
     style: _components_MediaUploader_style__WEBPACK_IMPORTED_MODULE_3__.mediaUploaderStyle.getBackgroundCoverImage(attributes.imageUrl)
   });
+  const heroTitleContainerClass = attributes.height === 'full' ? _style__WEBPACK_IMPORTED_MODULE_2__.style.heroTitleContainerFullScreen : _style__WEBPACK_IMPORTED_MODULE_2__.style.heroTitleContainerFixedHeight;
+  const heroTitleClass = `${_style__WEBPACK_IMPORTED_MODULE_2__.style.heroTitle} ${attributes.height === 'fixed' ? 'mb-12' : ''}`;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("section", {
     ...blockProps,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "[grid-area:stack] z-20",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-        className: _style__WEBPACK_IMPORTED_MODULE_2__.style.heroTitleContainer,
+        className: heroTitleContainerClass,
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
           tagName: "p",
           "data-id": "hero-title",
-          className: _style__WEBPACK_IMPORTED_MODULE_2__.style.heroTitle,
+          className: heroTitleClass,
           value: heroTitle,
           placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Heading...', 'custom-gutenberg-blocks')
         })
@@ -398,8 +402,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const style = {
   heroWrapper: 'bg-amber-200',
-  heroTitleContainer: 'container my-auto flex h-full items-center',
-  heroTitle: 'text-white text-4xl lg:text-7xl leading-normal font-display pt-20 px-8 sm:px-0',
+  heroTitleContainerFullScreen: 'container my-auto flex h-full items-center',
+  heroTitleContainerFixedHeight: 'container my-auto flex h-full items-end',
+  heroTitle: 'text-white text-4xl lg:text-7xl !leading-normal font-display',
   imageContainer: 'bg-radial-gradient-opacity min-h-[430px]',
   imageContainerHeightFull: 'h-screen',
   imageContainerHeightFixed: 'h-60vh max-h-[500px]',

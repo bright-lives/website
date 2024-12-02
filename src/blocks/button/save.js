@@ -14,7 +14,7 @@ export default function save({attributes}) {
 		href: url,
 	});
 
-	return (
+	return text && (
 		<a { ...blockProps }>
 			<span className={componentStyle.textContainer}>{ text }</span>
 			<span className={componentStyle.iconContainer}>

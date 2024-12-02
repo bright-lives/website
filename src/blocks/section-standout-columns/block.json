@@ -21,6 +21,10 @@
 		"title": {
 			"type": "string",
 			"default": ""
+		},
+		"amountOfColumns": {
+			"type": "number",
+			"default": 0
 		}
 	}
 }

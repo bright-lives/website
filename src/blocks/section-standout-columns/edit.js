@@ -15,6 +15,8 @@ export default function Edit({attributes, setAttributes, clientId}) {
     return block ? block.innerBlocks : [];
   }, []);
 
+  setAttributes({ amountOfColumns: innerBlockCount.length });
+
   innerBlockCount.forEach((block, index) => {
     updateBlockAttributes(block.clientId, { index });
   });

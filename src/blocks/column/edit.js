@@ -1,6 +1,5 @@
 import {InnerBlocks, RichText, useBlockProps, useInnerBlocksProps} from "@wordpress/block-editor";
 import {__} from "@wordpress/i18n";
-import {style} from "./style";
 
 export default function edit({attributes, setAttributes}) {
 
