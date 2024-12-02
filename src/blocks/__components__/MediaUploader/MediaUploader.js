@@ -6,7 +6,7 @@ import {mediaUploaderStyle} from "./style";
 
 export const MediaUploader = ({ imageUrl, onSelectImage, onRemoveImage, allowedMediaTypes, imageOverlay = false }) => {
   return (imageUrl ? (
-      <div className="grid [grid-template-areas:'stack'] h-full w-full min-h-48">
+      <div className="grid [grid-template-areas:'stack'] min-h-72 h-full w-full">
         <div className="[grid-area:stack] z-40">
           <div className="flex justify-end m-2">
             <MediaUpload

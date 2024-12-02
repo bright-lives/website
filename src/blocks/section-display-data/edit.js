@@ -1,6 +1,7 @@
 import {__} from "@wordpress/i18n";
 import {RichText, useBlockProps} from "@wordpress/block-editor";
 import {TextControl} from "@wordpress/components";
+import {style} from "./style";
 
 export default function edit({ attributes, setAttributes }) {
 
@@ -18,7 +19,7 @@ export default function edit({ attributes, setAttributes }) {
         <div>
           <RichText
             tagName="h2"
-            className="text-xl font-heading mb-2"
+            className={style.title}
             value={attributes.title}
             onChange={(title) => setAttributes({title})}
             placeholder={__('Enter title here', 'custom-gutenberg-blocks')}

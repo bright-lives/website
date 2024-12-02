@@ -33,7 +33,7 @@ function edit({
     variant: 'inverted'
   }];
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
-    className: _style__WEBPACK_IMPORTED_MODULE_2__.style.column
+    className: 'p-4 bg-primary-500 !my-0 w-full h-full'
   });
   const innerBlockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useInnerBlocksProps)();
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("article", {
@@ -42,7 +42,7 @@ function edit({
       className: "h-28",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
         tagName: "h3",
-        className: "text-xl font-heading text-white mb-1",
+        className: "text-l font-heading text-white mb-1",
         value: attributes.title,
         onChange: title => setAttributes({
           title
@@ -53,7 +53,7 @@ function edit({
       className: "min-h-48",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
         tagName: "p",
-        className: "text-white",
+        className: "text-white text-sm",
         value: attributes.content,
         onChange: content => setAttributes({
           content

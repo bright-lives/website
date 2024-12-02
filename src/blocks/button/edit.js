@@ -52,6 +52,7 @@ export default function Edit({ attributes, setAttributes }) {
 							ref={richTextRef}
 							tagName="p"
 							value={text}
+							className="text-sm"
 							onChange={(text) => setAttributes({text})}
 							allowedFormats={[]}
 							placeholder={__('Add text...', 'custom-gutenberg-blocks')}
@@ -65,49 +66,49 @@ export default function Edit({ attributes, setAttributes }) {
 			<BlockControls>
 				<Toolbar>
 					<ToolbarGroup label="Style">
-								<ToolbarButton icon={ buttonFilled } label="Fill" onClick={() => setAttributes({style: 'fill'})} isActive={style === 'fill'} />
-								<ToolbarButton icon={ button } label="Outline" onClick={() => setAttributes({style: 'outline'})} isActive={style === 'outline'} />
-								<ToolbarButton icon={ lineSolid } label="Text" onClick={() => setAttributes({style: 'text'})} isActive={style === 'text'} />
-							</ToolbarGroup>
-						</Toolbar>
-						<Toolbar>
-							<ToolbarGroup label="Variant">
-								<ToolbarButton icon={ stylesIcon } label="Normal" onClick={() => setAttributes({variant: 'normal'})} isActive={variant === 'normal'} />
-								<ToolbarButton icon={ stylesInverted } label="Inverted" onClick={() => setAttributes({variant: 'inverted'})} isActive={variant === 'inverted'} />
-							</ToolbarGroup>
-						</Toolbar>
-						<Toolbar>
-							<ToolbarGroup label="Link">
-								{!url && (
-									<ToolbarButton icon={ link } label="Link" shortcut={ displayShortcut.primary( 'k' ) } onClick={startEditingURL} />
-								)}
-								{!!url && (
-									<ToolbarButton icon={ linkOff } label="Unlink" onClick={startEditingURL} shortcut={ displayShortcut.primaryShift( 'k' ) } isActive />
-								)}
-							</ToolbarGroup>
-						</Toolbar>
-					</BlockControls>
+					<ToolbarButton icon={ buttonFilled } label="Fill" onClick={() => setAttributes({style: 'fill'})} isActive={style === 'fill'} />
+					<ToolbarButton icon={ button } label="Outline" onClick={() => setAttributes({style: 'outline'})} isActive={style === 'outline'} />
+					<ToolbarButton icon={ lineSolid } label="Text" onClick={() => setAttributes({style: 'text'})} isActive={style === 'text'} />
+				</ToolbarGroup>
+				</Toolbar>
+				<Toolbar>
+					<ToolbarGroup label="Variant">
+						<ToolbarButton icon={ stylesIcon } label="Normal" onClick={() => setAttributes({variant: 'normal'})} isActive={variant === 'normal'} />
+						<ToolbarButton icon={ stylesInverted } label="Inverted" onClick={() => setAttributes({variant: 'inverted'})} isActive={variant === 'inverted'} />
+					</ToolbarGroup>
+				</Toolbar>
+				<Toolbar>
+					<ToolbarGroup label="Link">
+						{!url && (
+							<ToolbarButton icon={ link } label="Link" shortcut={ displayShortcut.primary( 'k' ) } onClick={startEditingURL} />
+						)}
+						{!!url && (
+							<ToolbarButton icon={ linkOff } label="Unlink" onClick={startEditingURL} shortcut={ displayShortcut.primaryShift( 'k' ) } isActive />
+						)}
+					</ToolbarGroup>
+				</Toolbar>
+			</BlockControls>
 
-					{isEditingURL && (
-						<Popover
-							placement="bottom"
-							onClose={() => {
-								setIsEditingURL(false);
-								richTextRef.current?.focus();
-							}}
-							// necessary for it to close when you click outside the popover
-							__unstableSlotName="__unstable-block-tools-after"
-						>
-							<LinkControl
-								value={linkValue}
-								onChange={(linkValue) => { setAttributes({ url: linkValue.url }); }}
-								onRemove={() => {
-									unlink();
-									richTextRef.current?.focus();
-								}}
-							></LinkControl>
-						</Popover>
-					)}
+			{isEditingURL && (
+				<Popover
+					placement="bottom"
+					onClose={() => {
+						setIsEditingURL(false);
+						richTextRef.current?.focus();
+					}}
+					// necessary for it to close when you click outside the popover
+					__unstableSlotName="__unstable-block-tools-after"
+				>
+					<LinkControl
+						value={linkValue}
+						onChange={(linkValue) => { setAttributes({ url: linkValue.url }); }}
+						onRemove={() => {
+							unlink();
+							richTextRef.current?.focus();
+						}}
+					></LinkControl>
+				</Popover>
+			)}
 		</>
 	);
 }

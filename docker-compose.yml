@@ -1,4 +1,3 @@
-version: "3"
 services:
   db:
     image: mysql:8.0
@@ -25,6 +24,7 @@ services:
     volumes:
       - ./bright-lives-theme:/var/www/html/wp-content/themes/bright-lives-theme
       - ./plugins:/var/www/html/wp-content/plugins
+      - ./wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: $MYSQL_USER

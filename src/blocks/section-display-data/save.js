@@ -1,4 +1,5 @@
 import {RichText} from "@wordpress/block-editor";
+import {style} from "./style";
 
 export default function save({ attributes }) {
   return (
@@ -6,7 +7,7 @@ export default function save({ attributes }) {
       <div className="max-w-lg">
         <RichText.Content
           tagName="h2"
-          className="text-4xl leading-normal font-serif mb-6"
+          className={style.title}
           value={attributes.title}
         />
         <RichText.Content

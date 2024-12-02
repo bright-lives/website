@@ -8,7 +8,7 @@ export default function edit({ attributes, setAttributes }) {
   const INNER_BLOCK_TEMPLATE = ['bright-lives/button', { style: 'outline', variant: 'inverted' }];
 
   const blockProps = useBlockProps({
-    className: style.section.className,
+    className: style.section.className + ' px-20 pb-10',
   });
   const innerBlockProps = useInnerBlocksProps({
     className: style.buttonContainer.className,

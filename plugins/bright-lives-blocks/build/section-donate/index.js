@@ -33,7 +33,7 @@ function edit({
     variant: 'inverted'
   }];
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
-    className: _style__WEBPACK_IMPORTED_MODULE_2__.style.section.className
+    className: _style__WEBPACK_IMPORTED_MODULE_2__.style.section.className + ' px-20 pb-10'
   });
   const innerBlockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useInnerBlocksProps)({
     className: _style__WEBPACK_IMPORTED_MODULE_2__.style.buttonContainer.className

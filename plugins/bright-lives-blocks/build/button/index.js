@@ -177,6 +177,7 @@ function Edit({
             ref: richTextRef,
             tagName: "p",
             value: text,
+            className: "text-sm",
             onChange: text => setAttributes({
               text
             }),

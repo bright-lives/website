@@ -38,7 +38,7 @@ const MediaUploader = ({
   imageOverlay = false
 }) => {
   return imageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    className: "grid [grid-template-areas:'stack'] h-full w-full min-h-48",
+    className: "grid [grid-template-areas:'stack'] min-h-72 h-full w-full",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "[grid-area:stack] z-40",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
@@ -266,7 +266,7 @@ function Edit({
     imageAlt: ''
   });
   const gridClass = attributes.imageUrl === '' ? 'grid-cols-12 gap-4 items-center h-96' : '[grid-template-areas:"stack"]';
-  const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack] h-80';
+  const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack] h-[50vh]';
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Toolbar, {

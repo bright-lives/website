@@ -20,7 +20,7 @@ export default function save({ attributes }) {
 						/>
 						<RichText.Content
 							tagName="p"
-							className="mb-4"
+							className="mb-8"
 							value={content}
 						/>
 						<InnerBlocks.Content />

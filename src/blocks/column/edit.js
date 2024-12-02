@@ -8,7 +8,7 @@ export default function edit({attributes, setAttributes}) {
   const INNER_BLOCK_TEMPLATE = ['bright-lives/button', { style: 'text', variant: 'inverted' }];
 
   const blockProps = useBlockProps({
-    className: style.column,
+    className: 'p-4 bg-primary-500 !my-0 w-full h-full',
   });
   const innerBlockProps = useInnerBlocksProps();
 
@@ -17,7 +17,7 @@ export default function edit({attributes, setAttributes}) {
       <div className="h-28">
         <RichText
           tagName="h3"
-          className="text-xl font-heading text-white mb-1"
+          className="text-l font-heading text-white mb-1"
           value={attributes.title}
           onChange={(title) => setAttributes({title})}
           placeholder={__('Enter title here', 'custom-gutenberg-blocks')}
@@ -26,7 +26,7 @@ export default function edit({attributes, setAttributes}) {
       <div className="min-h-48">
         <RichText
           tagName="p"
-          className="text-white"
+          className="text-white text-sm"
           value={attributes.content}
           onChange={(content) => setAttributes({content})}
           placeholder={__('Enter content here', 'custom-gutenberg-blocks')}

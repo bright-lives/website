@@ -6,6 +6,7 @@ module.exports = {
       "./src/blocks/**/edit.js",
       "./src/blocks/**/save.js",
       "./src/blocks/**/style.js",
+      "./src/blocks/__components__/**/*.js",
     ],
     theme: {
       container: {

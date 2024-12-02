@@ -26,7 +26,7 @@ export default function Edit({ attributes, setAttributes }) {
 	const onRemoveImage = () => setAttributes({ imageUrl: '', imageAlt: '' });
 
 	const gridClass = attributes.imageUrl === '' ? 'grid-cols-12 gap-4 items-center h-96' : '[grid-template-areas:"stack"]';
-	const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack] h-80';
+	const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack] h-[50vh]';
 
 	return (
 		<>

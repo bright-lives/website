@@ -9,7 +9,7 @@ function custom_allowed_block_types($allowed_blocks, $editor_context): array {
 	 * Full list of core blocks: https://developer.wordpress.org/block-editor/reference-guides/core-blocks/
 	 */
 	$allowed_core_blocks = [
-//	    'core/buttons',
+//  'core/buttons',
 	];
 
 	$all_blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
@@ -21,6 +21,7 @@ function custom_allowed_block_types($allowed_blocks, $editor_context): array {
 			$allowed_blocks[] = $block_name;
 		}
 
+		// allow custom blocks
 		elseif (!str_starts_with( $block_name, 'core/')) {
 			$allowed_blocks[] = $block_name;
 		}
