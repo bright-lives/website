@@ -263,12 +263,6 @@
                                 opvang voor kinderen te bieden. In plaats daarvan streven we ernaar om hen scholing te geven,
                                 gecombineerd met de mogelijkheid tot tijdelijk verblijf gedurende de week.
                             </p>
-<!--                            <p class="font-sans-serif">-->
-<!--                                Deze ongebruikte gebouwen bieden een unieke kans om een bruisende campus te creëren waar-->
-<!--                                onderwijs centraal staat. Om deze visie te realiseren, hebben we uw hulp nodig. Met uw steun-->
-<!--                                kunnen we de benodigde fondsen inzamelen om de transformatie van deze gebouwen mogelijk te maken.-->
-<!--                                Samen kunnen we een veilige en stimulerende omgeving creëren waar kinderen kunnen leren en groeien.-->
-<!--                            </p>-->
                             <p class="font-sans-serif mb-4">
                                 Ons doel is om kwalitatief goed onderwijs aan kansarmen in de regio te bieden en zo inkomsten
                                 te genereren om ons programma in Ghana zelfvoorzienend te maken. We plannen een campus met een
@@ -278,7 +272,7 @@
 
                             <p class="font-sans-serif mb-4">
                                 Dit project is essentieel omdat het huidige onderwijsniveau te laag is voor kinderen om goede kansen te krijgen.
-                                Daarnaast is het programma afhankelijk van Nederlandse financiering, wat het kwetsbaar maakt.
+                                Daarnaast is het programma-afhankelijk van Nederlandse financiering, wat het kwetsbaar maakt.
                                 We willen het programma financieel zelfvoorzienend maken, wat de continuïteit waarborgt
                                 en alle betrokkenen in Ghana ten goede komt.
                             </p>

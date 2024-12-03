@@ -2,22 +2,24 @@ import {InnerBlocks, RichText, useBlockProps} from "@wordpress/block-editor";
 import {style} from "./style";
 
 export default function save({ attributes }) {
-  const { title, content } = attributes;
+  const { title, content, index, parentHasAmountOfColumns } = attributes;
 
   const blockProps = useBlockProps.save({
-    className: style.getUpdatedColumnStyle(attributes.index),
+    className: `p-10 ${style.getColumnBackgroundColor(parentHasAmountOfColumns, index)}`,
   });
+
+  const titleSize = parentHasAmountOfColumns === 5 ? "text-xl" : "text-2xl";
 
   return (
     <article {...blockProps}>
-      <div className="h-28">
+      <div className={style.titleContainer}>
         <RichText.Content
           tagName="h3"
-          className="text-2xl font-heading text-white mb-4"
+          className={`${titleSize} ${style.title} mb-4`}
           value={title}
         />
       </div>
-      <div className="min-h-48">
+      <div className={style.contentContainer}>
         <RichText.Content
           tagName="p"
           className="text-white"

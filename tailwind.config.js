@@ -42,11 +42,15 @@ module.exports = {
         },
         height: {
           '80vh': '80vh',
-          '60vh': '60vh'
+          '60vh': '60vh',
+          '7rem': '7rem',
         },
         boxShadow: {
           'custom-inset': 'inset 0 0 0 1px #1e1e1e',
         },
+        gridAutoRows: {
+          '2fr': 'minmax(0, 2fr)',
+        }
       }
     },
     plugins: [

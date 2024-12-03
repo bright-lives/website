@@ -32,6 +32,15 @@
     "index": {
       "type": "number",
       "default": 0
+    },
+    "parentHasAmountOfColumns": {
+      "type": "number",
+      "enum": [
+        3,
+        4,
+        5
+      ],
+      "default": 4
     }
   }
 }

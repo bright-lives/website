@@ -1,5 +1,6 @@
 import {InnerBlocks, RichText, useBlockProps} from "@wordpress/block-editor";
 import {commonStyle} from "../__components__/common-style";
+import {style} from "./style";
 
 export default function save({ attributes }) {
 
@@ -9,7 +10,7 @@ export default function save({ attributes }) {
     className: `container mx-auto ${attributes.title ? 'pt-24' : ''}`,
   });
 
-  const gridColsClass = `md:grid-cols-${amountOfColumns}`;
+  const gridAmountOfCols = `md:grid-cols-${amountOfColumns}`;
 
   return (
     <section {...blockProps}>
@@ -24,7 +25,7 @@ export default function save({ attributes }) {
           </div>
         </div>
       )}
-      <div className={`grid grid-cols-1 ${gridColsClass}`}>
+      <div className={`grid grid-cols-1 ${gridAmountOfCols} ${style.columnsContainer}`}>
         <InnerBlocks.Content/>
       </div>
     </section>
