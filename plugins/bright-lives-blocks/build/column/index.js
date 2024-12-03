@@ -26,10 +26,7 @@ function edit({
   setAttributes
 }) {
   const ALLOWED_BLOCKS = ['bright-lives/button'];
-  const INNER_BLOCK_TEMPLATE = ['bright-lives/button', {
-    style: 'text',
-    variant: 'inverted'
-  }];
+  const INNER_BLOCK_TEMPLATE = [];
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
     className: 'p-4 bg-primary-500 !my-0 w-full h-full'
   });
@@ -62,8 +59,8 @@ function edit({
       ...innerBlockProps,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks, {
         allowedBlocks: ALLOWED_BLOCKS,
-        template: [INNER_BLOCK_TEMPLATE],
-        templateLock: "all"
+        template: INNER_BLOCK_TEMPLATE,
+        templateLock: false
       })
     })]
   });

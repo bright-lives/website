@@ -4,7 +4,7 @@ import {__} from "@wordpress/i18n";
 export default function edit({attributes, setAttributes}) {
 
   const ALLOWED_BLOCKS = ['bright-lives/button'];
-  const INNER_BLOCK_TEMPLATE = ['bright-lives/button', { style: 'text', variant: 'inverted' }];
+  const INNER_BLOCK_TEMPLATE = [];
 
   const blockProps = useBlockProps({
     className: 'p-4 bg-primary-500 !my-0 w-full h-full',
@@ -34,8 +34,8 @@ export default function edit({attributes, setAttributes}) {
       <div {...innerBlockProps}>
         <InnerBlocks
           allowedBlocks={ALLOWED_BLOCKS}
-          template={[INNER_BLOCK_TEMPLATE]}
-          templateLock="all"
+          template={INNER_BLOCK_TEMPLATE}
+          templateLock={false}
         />
       </div>
     </article>
