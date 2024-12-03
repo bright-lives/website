@@ -1,5 +1,6 @@
 import {RichText} from "@wordpress/block-editor";
 import {style} from "./style";
+import {commonStyle} from "../__components__/common-style";
 
 export default function save({ attributes }) {
   return (
@@ -7,7 +8,7 @@ export default function save({ attributes }) {
       <div className="max-w-lg">
         <RichText.Content
           tagName="h2"
-          className={style.title}
+          className={commonStyle.headings.section}
           value={attributes.title}
         />
         <RichText.Content

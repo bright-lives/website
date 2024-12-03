@@ -1,5 +1,6 @@
 import {useBlockProps, RichText} from '@wordpress/block-editor';
 import {InnerBlocks} from '@wordpress/block-editor';
+import {commonStyle} from "../__components__/common-style";
 
 export default function save({ attributes }) {
 	const { title, content, imageUrl, imageAlt } = attributes;
@@ -15,7 +16,7 @@ export default function save({ attributes }) {
 					<div className="font-sans-serif max-w-lg pt-20 sm:pt-0 px-8 sm:px-0">
 						<RichText.Content
 							tagName="h2"
-							className="text-4xl leading-normal font-serif mb-6"
+							className={commonStyle.headings.section}
 							value={title}
 						/>
 						<RichText.Content

@@ -1,6 +1,7 @@
 import {InnerBlocks, RichText, useBlockProps, useInnerBlocksProps} from "@wordpress/block-editor";
 import { useSelect, useDispatch } from '@wordpress/data';
 import {__} from "@wordpress/i18n";
+import {commonStyle} from "../__components__/common-style";
 
 export default function Edit({attributes, setAttributes, clientId}) {
 
@@ -34,7 +35,7 @@ export default function Edit({attributes, setAttributes, clientId}) {
     className: '',
   });
 
-  const innerBlockProps/**/ = useInnerBlocksProps(
+  const innerBlockProps = useInnerBlocksProps(
     { className: 'grid grid-cols-1 md:grid-cols-4 w-full' },
     {
       allowedBlocks: ALLOWED_BLOCKS,
@@ -49,7 +50,7 @@ export default function Edit({attributes, setAttributes, clientId}) {
         <div className="grid grid-cols-1 md:grid-cols-2">
           <RichText
             tagName="h2"
-            className="text-4xl leading-normal font-serif mb-6"
+            className={commonStyle.headings.section}
             value={attributes.title}
             onChange={(title) => setAttributes({title})}
             placeholder={__('Enter title here', 'custom-gutenberg-blocks')}

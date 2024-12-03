@@ -114,7 +114,7 @@
                     </p>
                     <p class="font-sans-serif mb-4">
                         In 2011 moesten de kinderen op verzoek van de overheid terugkeren naar huis om zich daar ook te oriënteren
-                        op het leven. Zodra ze 18 jaar worden en Bright Lives moeten verlaten zouden ze zo min
+                        op het leven. Zodra ze 18 jaar worden en Bright  Lives moeten verlaten zouden ze zo min
                         mogelijk problemen hebben met re-integreren in de samenleving. Dit zorgde ervoor dat we de kinderen terug moesten
                         elke keer als er vakantie was. Helaas bleek dat ze bij terugkomst vaak ondervoed waren en dit gold voor alle kinderen.
                     </p>
@@ -170,10 +170,6 @@
                         met een minimaal inkomen en kwetsbaarheid voor misbruik en uitbuiting.
                         Dit kan leiden tot tienerzwangerschappen en gedwongen huwelijken.
                     </p>
-<!--                    <p class="font-sans-serif mb-4">-->
-<!--                        Er zijn terugkerende thema's in Ghana die aandacht nodig hebben, zoals onderwijs, het tegengaan van-->
-<!--                        kindhuwelijken, uitbuiting, tienerzwangerschappen, financiële ongelijkheid, en gelijke rechten voor meisjes en vrouwen.-->
-<!--                    </p>-->
                     <p>
                         Het is essentieel om deze sociale problemen aan te pakken en ondersteuning te bieden aan kwetsbare
                         kinderen en meisjes om hun toekomstperspectieven te verbeteren en hen te beschermen tegen uitbuiting en ongelijkheid.

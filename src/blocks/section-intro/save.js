@@ -1,5 +1,6 @@
 import {RichText, useBlockProps} from '@wordpress/block-editor';
 import {style} from "./style";
+import {commonStyle} from "../__components__/common-style";
 
 export default function save({ attributes }) {
 
@@ -12,7 +13,7 @@ export default function save({ attributes }) {
 			<div className={style.column}>
 				<RichText.Content
 					tagName="h2"
-					className={style.title}
+					className={commonStyle.headings.section}
 					value={attributes.title}
 				/>
 				<RichText.Content

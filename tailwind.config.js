@@ -44,6 +44,9 @@ module.exports = {
           '80vh': '80vh',
           '60vh': '60vh'
         },
+        boxShadow: {
+          'custom-inset': 'inset 0 0 0 1px #1e1e1e',
+        },
       }
     },
     plugins: [

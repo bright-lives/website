@@ -1,4 +1,5 @@
 import {InnerBlocks, RichText, useBlockProps} from "@wordpress/block-editor";
+import {commonStyle} from "../__components__/common-style";
 
 export default function save({ attributes }) {
 
@@ -17,7 +18,7 @@ export default function save({ attributes }) {
           <div className="grid grid-cols-1 md:grid-cols-2">
             <RichText.Content
               tagName="h2"
-              className="text-4xl leading-normal font-serif mb-6"
+              className={commonStyle.headings.section}
               value={title}
             />
           </div>
