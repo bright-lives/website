@@ -1,10 +1,9 @@
 import { __ } from '@wordpress/i18n';
 
-import {useBlockProps, RichText, MediaUpload, BlockControls} from '@wordpress/block-editor';
-import {Button, IconButton, Placeholder, Toolbar, ToolbarButton, ToolbarGroup} from "@wordpress/components";
-import {edit, image, trash} from "@wordpress/icons";
+import {useBlockProps, RichText, BlockControls} from '@wordpress/block-editor';
+import {Toolbar, ToolbarButton, ToolbarGroup} from "@wordpress/components";
 import {fullScreen, fixedHeight} from "./assets/icons";
-import {style} from "./style";
+import {style, styleTitleMap} from "./style";
 import {mediaUploaderStyle} from "../__components__/MediaUploader/style";
 import {MediaUploader} from "../__components__/MediaUploader/MediaUploader";
 
@@ -28,9 +27,7 @@ export default function Edit({ attributes, setAttributes }) {
 	const gridClass = attributes.imageUrl === '' ? 'grid-cols-12 gap-4 items-center h-96' : '[grid-template-areas:"stack"]';
 	const columnClass = attributes.imageUrl === '' ? 'col-span-6' : '[grid-area:stack] h-[50vh]';
 
-	const heroTitleContainerClass = attributes.height === 'full' ? style.heroTitleContainerFullScreen : style.heroTitleContainerFixedHeight;
 	const heroTitleClass = `${style.heroTitle} ${(attributes.height === 'fixed' ? 'mb-12' : '')}`;
-
 
 	return (
 		<>
@@ -45,7 +42,7 @@ export default function Edit({ attributes, setAttributes }) {
 			<div { ...blockProps }>
 				<div className={`grid ${gridClass}`}>
 					<div className={`${columnClass} z-30`}>
-						<div className={`${heroTitleContainerClass} px-8`}>
+						<div className={`${style.heroTitleContainer} ${styleTitleMap[attributes.height]} px-8`}>
 							<RichText
 								tagName="p"
 								data-id="hero-title"

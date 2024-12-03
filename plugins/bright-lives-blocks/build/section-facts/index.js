@@ -15,7 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 const commonStyle = {
   headings: {
     section: "text-4xl leading-normal font-serif mb-6",
-    column: "text-2xl leading-normal font-serif mb-6"
+    column: "text-2xl leading-normal font-serif"
   }
 };
 
@@ -174,9 +174,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   style: () => (/* binding */ style)
 /* harmony export */ });
 const style = {
-  container: 'container mx-auto grid grid-cols-1 md:grid-cols-5 gap-x-4 gap-y-12 pb-10 mt-14',
+  container: 'container mx-auto grid grid-cols-1 grid-cols-4 gap-x-4 gap-y-8 lg:gap-y-12 pb-10 mt-14 px-10 md:px-0',
   titleColumn: 'col-span-2',
-  contentColumn: 'col-span-3 max-w-2xl'
+  contentColumn: 'col-span-2 max-w-2xl'
 };
 
 /***/ }),

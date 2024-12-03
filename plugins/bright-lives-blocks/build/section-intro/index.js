@@ -15,7 +15,7 @@ __webpack_require__.r(__webpack_exports__);
 const commonStyle = {
   headings: {
     section: "text-4xl leading-normal font-serif mb-6",
-    column: "text-2xl leading-normal font-serif mb-6"
+    column: "text-2xl leading-normal font-serif"
   }
 };
 
@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   style: () => (/* binding */ style)
 /* harmony export */ });
 const style = {
-  container: 'container mx-auto grid grid-cols-1 md:grid-cols-2',
+  container: 'container mx-auto grid grid-cols-1 md:grid-cols-2 px-10 md:px-0',
   column: 'items-center py-24',
   intro: 'font-sans-serif text-xl font-bold'
 };

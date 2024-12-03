@@ -31,6 +31,10 @@
 		"imageAlt": {
 			"type": "string",
 			"default": ""
+		},
+		"orientation": {
+			"enum": ["normal", "reversed"],
+			"default": "normal"
 		}
 	}
 }

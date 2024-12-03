@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import {useBlockProps, RichText} from "@wordpress/block-editor";
-import {style, styleHeightMap} from "./style";
+import {style, styleHeightMap, styleTitleMap} from "./style";
 import {mediaUploaderStyle} from "../__components__/MediaUploader/style";
 
 export default function Save({attributes}) {
@@ -11,13 +11,12 @@ export default function Save({attributes}) {
     style: mediaUploaderStyle.getBackgroundCoverImage(attributes.imageUrl),
   });
 
-  const heroTitleContainerClass = attributes.height === 'full' ? style.heroTitleContainerFullScreen : style.heroTitleContainerFixedHeight;
   const heroTitleClass = `${style.heroTitle} ${(attributes.height === 'fixed' ? 'mb-12' : '')}`;
 
   return (
     <section {...blockProps}>
       <div className="[grid-area:stack] z-20">
-        <div className={heroTitleContainerClass}>
+        <div className={`${style.heroTitleContainer} ${styleTitleMap[attributes.height]}`}>
           <RichText.Content
             tagName="p"
             data-id="hero-title"

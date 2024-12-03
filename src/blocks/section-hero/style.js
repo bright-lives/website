@@ -1,7 +1,8 @@
 export const style = {
   heroWrapper: 'bg-amber-200',
-  heroTitleContainerFullScreen: 'container my-auto flex h-full items-center',
-  heroTitleContainerFixedHeight: 'container my-auto flex h-full items-end',
+  heroTitleContainer: 'container my-auto flex h-full px-10 md:px-0',
+  heroTitleContainerFullScreen: 'items-center',
+  heroTitleContainerFixedHeight: 'items-end',
   heroTitle: 'text-white text-4xl lg:text-7xl !leading-normal font-display',
   imageContainer: 'bg-radial-gradient-opacity min-h-[430px]',
   imageContainerHeightFull: 'h-screen',
@@ -13,3 +14,8 @@ export const styleHeightMap = {
   'full': style.imageContainerHeightFull,
   'fixed': style.imageContainerHeightFixed,
 };
+
+export const styleTitleMap = {
+  'full': style.heroTitleContainerFullScreen,
+  'fixed': style.heroTitleContainerFixedHeight,
+}

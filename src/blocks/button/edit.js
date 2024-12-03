@@ -66,10 +66,10 @@ export default function Edit({ attributes, setAttributes }) {
 			<BlockControls>
 				<Toolbar>
 					<ToolbarGroup label="Style">
-					<ToolbarButton icon={ buttonFilled } label="Fill" onClick={() => setAttributes({style: 'fill'})} isActive={style === 'fill'} />
-					<ToolbarButton icon={ button } label="Outline" onClick={() => setAttributes({style: 'outline'})} isActive={style === 'outline'} />
-					<ToolbarButton icon={ lineSolid } label="Text" onClick={() => setAttributes({style: 'text'})} isActive={style === 'text'} />
-				</ToolbarGroup>
+						<ToolbarButton icon={ buttonFilled } label="Fill" onClick={() => setAttributes({style: 'fill'})} isActive={style === 'fill'} />
+						<ToolbarButton icon={ button } label="Outline" onClick={() => setAttributes({style: 'outline'})} isActive={style === 'outline'} />
+						<ToolbarButton icon={ lineSolid } label="Text" onClick={() => setAttributes({style: 'text'})} isActive={style === 'text'} />
+					</ToolbarGroup>
 				</Toolbar>
 				<Toolbar>
 					<ToolbarGroup label="Variant">

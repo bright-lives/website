@@ -1,3 +1,3 @@
 export default buttonFilled;
 declare const buttonFilled: import("react").JSX.Element;
-//# sourceMappingURL=buttonFilled.d.ts.map
+//# sourceMappingURL=button-filled.d.ts.map

@@ -1,8 +1,9 @@
 import { __ } from '@wordpress/i18n';
 
-import {InnerBlocks, RichText, useBlockProps, useInnerBlocksProps} from '@wordpress/block-editor';
-import {Flex, FlexItem} from '@wordpress/components';
+import {BlockControls, InnerBlocks, RichText, useBlockProps, useInnerBlocksProps} from '@wordpress/block-editor';
+import {Flex, FlexItem, Toolbar, ToolbarButton, ToolbarGroup} from '@wordpress/components';
 import {MediaUploader} from "../__components__/MediaUploader/MediaUploader";
+import {imageRight, imageLeft} from "./assets/icons";
 
 export default function Edit({ attributes, setAttributes }) {
 
@@ -10,7 +11,9 @@ export default function Edit({ attributes, setAttributes }) {
 	const ALLOWED_BLOCKS = ['bright-lives/button'];
 	const INNER_BLOCK_TEMPLATE = ['bright-lives/button', { style: 'outline' }];
 
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: 'py-8',
+	});
 	const innerBlockProps = useInnerBlocksProps();
 
 	const onRemoveImage = () => {
@@ -21,10 +24,13 @@ export default function Edit({ attributes, setAttributes }) {
 		setAttributes({ imageUrl: media.url, imageAlt: media.alt })
 	}
 
+	const isOrientationNormal = attributes.orientation === 'normal';
+	const isOrientationReversed = attributes.orientation === 'reversed';
+
 	return (
 		<div {...blockProps}>
-			<Flex>
-				<FlexItem className="w-2/3">
+			<Flex direction={isOrientationReversed ? 'row-reverse' : 'row'}>
+				<FlexItem className={`w-1/2 ${isOrientationReversed ? 'px-20' : ''}`}>
 					<RichText
 						tagName="h2"
 						className="mb-4 text-2xl"
@@ -47,7 +53,7 @@ export default function Edit({ attributes, setAttributes }) {
 						/>
 					</div>
 				</FlexItem>
-				<FlexItem className="w-1/3">
+				<FlexItem className="w-1/2">
 					<MediaUploader
 						imageUrl={attributes.imageUrl}
 						onSelectImage={onSelectImage}
@@ -56,6 +62,14 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</FlexItem>
 			</Flex>
+			<BlockControls>
+				<Toolbar>
+					<ToolbarGroup label="Orientation">
+						<ToolbarButton icon={ imageRight } label="Normal" onClick={() => setAttributes({orientation: 'normal'})} isActive={isOrientationNormal} />
+						<ToolbarButton icon={ imageLeft } label="Reversed" onClick={() => setAttributes({orientation: 'reversed'})} isActive={isOrientationReversed} />
+					</ToolbarGroup>
+				</Toolbar>
+			</BlockControls>
 		</div>
 	);
 }

@@ -1,6 +1,6 @@
 # Gutenberg blocks
 
-## Wordpress Resources
+## WordPress Resources
 
 - Full list of icons: https://wphelpers.dev/icons/
 - Icons to use in block.js: https://developer.wordpress.org/resource/dashicons/
