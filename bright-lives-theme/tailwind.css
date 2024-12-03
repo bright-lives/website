@@ -1635,6 +1635,18 @@ video {
     grid-column: span 2 / span 2;
   }
 
+  .md\:mt-auto {
+    margin-top: auto;
+  }
+
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .md\:mt-16 {
+    margin-top: 4rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1674,6 +1686,11 @@ video {
     padding-bottom: 0px;
   }
 
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .md\:pl-0 {
     padding-left: 0px;
   }
@@ -1688,6 +1705,10 @@ video {
 
   .md\:pt-40 {
     padding-top: 10rem;
+  }
+
+  .md\:pt-14 {
+    padding-top: 3.5rem;
   }
 }
 

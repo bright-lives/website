@@ -35,6 +35,10 @@
 		"orientation": {
 			"enum": ["normal", "reversed"],
 			"default": "normal"
+		},
+		"backgroundGradient": {
+			"type": "boolean",
+			"default": true
 		}
 	}
 }

@@ -3,16 +3,18 @@ import { __ } from '@wordpress/i18n';
 import {BlockControls, InnerBlocks, RichText, useBlockProps, useInnerBlocksProps} from '@wordpress/block-editor';
 import {Flex, FlexItem, Toolbar, ToolbarButton, ToolbarGroup} from '@wordpress/components';
 import {MediaUploader} from "../__components__/MediaUploader/MediaUploader";
+import {color} from "@wordpress/icons";
 import {imageRight, imageLeft} from "./assets/icons";
+import {style} from "./style";
 
 export default function Edit({ attributes, setAttributes }) {
 
 	const ALLOWED_MEDIA_TYPES = ['image'];
 	const ALLOWED_BLOCKS = ['bright-lives/button'];
-	const INNER_BLOCK_TEMPLATE = ['bright-lives/button', { style: 'outline' }];
+	const INNER_BLOCK_TEMPLATE = [];
 
 	const blockProps = useBlockProps({
-		className: 'py-8',
+		className: `py-8 ${attributes.backgroundGradient ? style.backgroundGradient : ''}`,
 	});
 	const innerBlockProps = useInnerBlocksProps();
 
@@ -24,8 +26,13 @@ export default function Edit({ attributes, setAttributes }) {
 		setAttributes({ imageUrl: media.url, imageAlt: media.alt })
 	}
 
+	const toggleBackgroundGradient = () => {
+		setAttributes({ backgroundGradient: !attributes.backgroundGradient });
+	}
+
 	const isOrientationNormal = attributes.orientation === 'normal';
 	const isOrientationReversed = attributes.orientation === 'reversed';
+	const isBackgroundGradientActive = !!attributes.backgroundGradient;
 
 	return (
 		<div {...blockProps}>
@@ -48,8 +55,8 @@ export default function Edit({ attributes, setAttributes }) {
 					<div {...innerBlockProps}>
 						<InnerBlocks
 							allowedBlocks={ALLOWED_BLOCKS}
-							template={[INNER_BLOCK_TEMPLATE]}
-							templateLock="all"
+							template={INNER_BLOCK_TEMPLATE}
+							templateLock={false}
 						/>
 					</div>
 				</FlexItem>
@@ -67,6 +74,11 @@ export default function Edit({ attributes, setAttributes }) {
 					<ToolbarGroup label="Orientation">
 						<ToolbarButton icon={ imageRight } label="Normal" onClick={() => setAttributes({orientation: 'normal'})} isActive={isOrientationNormal} />
 						<ToolbarButton icon={ imageLeft } label="Reversed" onClick={() => setAttributes({orientation: 'reversed'})} isActive={isOrientationReversed} />
+					</ToolbarGroup>
+				</Toolbar>
+				<Toolbar>
+					<ToolbarGroup label="Background gradient">
+						<ToolbarButton icon={ color } label="Background gradient" onClick={toggleBackgroundGradient} isActive={isBackgroundGradientActive} />
 					</ToolbarGroup>
 				</Toolbar>
 			</BlockControls>
