@@ -17,6 +17,7 @@ module.exports = {
         "serif": ['Merriweather'],
         "heading": ['Merriweather'],
         "display": ['Merriweather'],
+        "mono": ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas'],
       },
       extend: {
         colors: {

@@ -1,5 +1,4 @@
 import {RichText} from "@wordpress/block-editor";
-import {style} from "./style";
 import {commonStyle} from "../__components__/common-style";
 
 export default function save({ attributes }) {

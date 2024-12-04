@@ -135,7 +135,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -747,6 +747,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -843,6 +847,10 @@ video {
   width: 2.5rem;
 }
 
+.w-28 {
+  width: 7rem;
+}
+
 .w-auto {
   width: auto;
 }
@@ -933,6 +941,10 @@ video {
   justify-content: flex-end;
 }
 
+.\!justify-center {
+  justify-content: center !important;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -997,6 +1009,10 @@ video {
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-t-2 {
+  border-top-width: 2px;
 }
 
 .border-black {
@@ -1304,12 +1320,20 @@ video {
   text-align: right;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .font-display {
   font-family: Merriweather;
 }
 
 .font-heading {
   font-family: Merriweather;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
 }
 
 .font-sans-serif {
@@ -1364,6 +1388,11 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.slashed-zero {
+  --tw-slashed-zero: slashed-zero;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
 .tabular-nums {
@@ -1635,16 +1664,12 @@ video {
     grid-column: span 2 / span 2;
   }
 
-  .md\:mt-auto {
-    margin-top: auto;
-  }
-
-  .md\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
   .md\:mt-16 {
     margin-top: 4rem;
+  }
+
+  .md\:mt-auto {
+    margin-top: auto;
   }
 
   .md\:block {
@@ -1686,11 +1711,6 @@ video {
     padding-bottom: 0px;
   }
 
-  .md\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
   .md\:pl-0 {
     padding-left: 0px;
   }
@@ -1699,16 +1719,12 @@ video {
     padding-right: 2.5rem;
   }
 
-  .md\:pt-24 {
-    padding-top: 6rem;
+  .md\:pt-14 {
+    padding-top: 3.5rem;
   }
 
   .md\:pt-40 {
     padding-top: 10rem;
-  }
-
-  .md\:pt-14 {
-    padding-top: 3.5rem;
   }
 }
 
@@ -1719,10 +1735,6 @@ video {
 
   .lg\:gap-y-12 {
     row-gap: 3rem;
-  }
-
-  .lg\:p-0 {
-    padding: 0px;
   }
 
   .lg\:pt-20 {

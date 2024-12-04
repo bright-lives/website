@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bright-lives/section-calculator",
+  "version": "0.1.0",
+  "title": "Section Calculation overview",
+  "category": "theme",
+  "icon": "smiley",
+  "description": "Example section for an overview of a calculation. For example to show project costs.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "section-calculation-overview",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}
