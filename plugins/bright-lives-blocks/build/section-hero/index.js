@@ -294,7 +294,7 @@ function Edit({
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
         className: `grid ${gridClass}`,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-          className: `${columnClass} z-30`,
+          className: `${columnClass} z-50`,
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
             className: `${_style__WEBPACK_IMPORTED_MODULE_4__.style.heroTitleContainer} ${_style__WEBPACK_IMPORTED_MODULE_4__.styleTitleMap[attributes.height]} px-8`,
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {

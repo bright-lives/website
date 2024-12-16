@@ -3,8 +3,8 @@
         <div class="grid grid-cols-1 md:grid-cols-3">
             <div class="col-span-3 md:col-span-2 mb-8">
                 <label class="flex text-white text-2xl font-serif mb-6" for="e-mail">Schrijf je in:</label>
-                <form class="flex">
-                    <input id="e-mail" type="text" placeholder="e-mail@provider.nl" class="max-w-64 px-4 border-2 border-white" />
+                <form class="md:flex">
+                    <input id="e-mail" type="text" placeholder="e-mail@provider.nl" class="p-4 w-full md:max-w-64 mb-4 md:mb-0 border-2 border-white" />
                     <div class="flex">
                         <?php
                         $args = array(

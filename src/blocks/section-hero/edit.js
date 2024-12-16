@@ -41,7 +41,7 @@ export default function Edit({ attributes, setAttributes }) {
 			</BlockControls>
 			<div { ...blockProps }>
 				<div className={`grid ${gridClass}`}>
-					<div className={`${columnClass} z-30`}>
+					<div className={`${columnClass} z-50`}>
 						<div className={`${style.heroTitleContainer} ${styleTitleMap[attributes.height]} px-8`}>
 							<RichText
 								tagName="p"

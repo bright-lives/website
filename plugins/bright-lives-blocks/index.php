@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Bright Lives Blocks
  * Description: Custom blocks for the Bright Lives theme.
- * Version: 1.0
+ * Version: 1.1
  * Author: Spindle B.V.
  */
 
