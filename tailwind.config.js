@@ -61,4 +61,9 @@ module.exports = {
     plugins: [
       require('@tailwindcss/typography'),
     ],
+    safelist: [
+      'md:grid-cols-3',
+      'md:grid-cols-4',
+      'md:grid-cols-5',
+    ],
 }
