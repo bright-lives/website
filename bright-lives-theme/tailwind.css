@@ -745,6 +745,34 @@ video {
   margin-top: 2rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1103,6 +1131,14 @@ video {
   padding: 1rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1181,6 +1217,10 @@ video {
 
 .pt-80 {
   padding-top: 20rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-left {
@@ -1330,6 +1370,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.\!text-primary-500 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(131 53 86 / var(--tw-text-opacity)) !important;
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1354,6 +1399,14 @@ video {
 
 .transition-all {
   transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1411,6 +1464,15 @@ video {
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-primary-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(70 18 41 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-opacity-60:hover {
+  --tw-bg-opacity: 0.6;
 }
 
 .hover\:fill-primary-500:hover {
@@ -1608,6 +1670,16 @@ video {
 
   .lg\:text-7xl {
     font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
     line-height: 1;
   }
 }

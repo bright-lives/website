@@ -3,7 +3,7 @@ export const style = {
   heroTitleContainer: 'container my-auto flex h-full px-10 md:px-0',
   heroTitleContainerFullScreen: 'items-center',
   heroTitleContainerFixedHeight: 'items-end',
-  heroTitle: 'text-white text-4xl lg:text-7xl !leading-normal font-display',
+  heroTitle: 'text-white text-4xl lg:text-5xl xxl:text-6xl !leading-normal font-display',
   imageContainer: 'bg-radial-gradient-opacity min-h-[430px]',
   imageContainerHeightFull: 'h-screen',
   imageContainerHeightFixed: 'h-60vh max-h-[500px]',

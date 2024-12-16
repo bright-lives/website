@@ -1,45 +1,43 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.getElementById('menu-toggle');
+const menuToggle = document.getElementById('menu-toggle');
 
-    menuToggle?.addEventListener('click', function() {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
+menuToggle?.addEventListener('click', function() {
+  document.getElementById('mobile-menu').classList.toggle('hidden');
 
-    const form = document.getElementById('mc-embedded-subscribe-form');
-    const emailInput = document.getElementById('mce-EMAIL');
-    const errorMessageDiv = document.getElementById('bright-lives-validation-errors');
+  document.getElementById('icon-cross').classList.toggle('hidden');
+  document.getElementById('icon-bars').classList.toggle('hidden');
+});
 
-    if (!form || !emailInput || !errorMessageDiv) {
-        console.error('Newsletter sign-up form validation not working because one or more of the required elements does not exist');
-        return;
-    }
+const form = document.getElementById('mc-embedded-subscribe-form');
+const emailInput = document.getElementById('mce-EMAIL');
+const errorMessageDiv = document.getElementById('bright-lives-validation-errors');
 
-    form.addEventListener('submit', function(event) {
-        let valid = true;
-        const errorMessages = [];
+if (!form || !emailInput || !errorMessageDiv) {
+  console.error('Newsletter sign-up form validation not working because one or more of the required elements does not exist');
+}
 
-      console.log(errorMessages);
+form.addEventListener('submit', function(event) {
+  let valid = true;
+  const errorMessages = [];
 
-        errorMessageDiv.style.display = 'none';
+  errorMessageDiv.style.display = 'none';
 
-        if (emailInput.value.trim() === '') {
-            valid = false;
-            errorMessages.push('Vul een e-mailadres in.');
-        }
+  if (emailInput.value.trim() === '') {
+    valid = false;
+    errorMessages.push('Vul een e-mailadres in.');
+  }
 
-        // Check if email contains '@' and a domain extension
-        const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-        if (!emailPattern.test(emailInput.value)) {
-            valid = false;
-            errorMessages.push('Email moet een "@" bevatten, en een domein extensie (bijvoorbeeld .nl).');
-        }
+  // Check if email contains '@' and a domain extension
+  const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  if (!emailPattern.test(emailInput.value)) {
+    valid = false;
+    errorMessages.push('Email moet een "@" bevatten, en een domein extensie (bijvoorbeeld .nl).');
+  }
 
-        // If not valid, prevent form submission and show error message
-        if (!valid) {
-            errorMessageDiv.textContent = errorMessages[0];
-            event.preventDefault(); // Prevent form from submitting
-            errorMessageDiv.style.display = 'block'; // Show error message
-        }
-    });
+  // If not valid, prevent form submission and show error message
+  if (!valid) {
+    errorMessageDiv.textContent = errorMessages[0];
+    event.preventDefault(); // Prevent form from submitting
+    errorMessageDiv.style.display = 'block'; // Show error message
+  }
 });
