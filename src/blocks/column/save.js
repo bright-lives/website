@@ -12,7 +12,7 @@ export default function save({ attributes }) {
 
   return (
     <article {...blockProps}>
-      <div className={style.titleContainer}>
+      <div className={style.getTitleContainer(parentHasAmountOfColumns)}>
         <RichText.Content
           tagName="h3"
           className={`${titleSize} ${style.title} mb-4`}

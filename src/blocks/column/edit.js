@@ -12,9 +12,11 @@ export default function edit({attributes, setAttributes}) {
   });
   const innerBlockProps = useInnerBlocksProps();
 
+  const titleContainer = "min-h-4rem";
+
   return (
     <article {...blockProps}>
-      <div className={style.titleContainer}>
+      <div className={titleContainer}>
         <RichText
           tagName="h3"
           className={`text-l mb-1 ${style.title}`}

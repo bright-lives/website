@@ -44,6 +44,10 @@ module.exports = {
         height: {
           '80vh': '80vh',
           '60vh': '60vh',
+        },
+        minHeight: {
+          '4rem': '4rem',
+          '5rem': '5rem',
           '7rem': '7rem',
         },
         boxShadow: {

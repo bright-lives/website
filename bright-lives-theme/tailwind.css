@@ -743,12 +743,12 @@ video {
   margin-top: 5rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .block {
@@ -795,10 +795,6 @@ video {
   height: 60vh;
 }
 
-.h-7rem {
-  height: 7rem;
-}
-
 .h-80vh {
   height: 80vh;
 }
@@ -827,8 +823,20 @@ video {
   max-height: 500px;
 }
 
+.min-h-4rem {
+  min-height: 4rem;
+}
+
+.min-h-5rem {
+  min-height: 5rem;
+}
+
 .min-h-72 {
   min-height: 18rem;
+}
+
+.min-h-7rem {
+  min-height: 7rem;
 }
 
 .min-h-\[300px\] {

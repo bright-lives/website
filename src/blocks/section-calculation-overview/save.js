@@ -1,9 +1,7 @@
-import {InnerBlocks, RichText, useBlockProps} from '@wordpress/block-editor';
+import {InnerBlocks, useBlockProps} from '@wordpress/block-editor';
 import {style} from "./style";
 
-export default function save({ attributes }) {
-
-	const { title } = attributes;
+export default function save() {
 
 	const blockProps = useBlockProps.save({
 		className: style.sectionContainer,
@@ -12,15 +10,8 @@ export default function save({ attributes }) {
 	return (
 		<section {...blockProps}>
 			<div className={style.container}>
-				<div className={style.firstColumnContainer}>
-					<RichText.Content
-						tagName="h2"
-						className={style.title}
-						value={title}
-					/>
-					<InnerBlocks.Content />
-				</div>
+				<InnerBlocks.Content />
 			</div>
 		</section>
-);
+	);
 }

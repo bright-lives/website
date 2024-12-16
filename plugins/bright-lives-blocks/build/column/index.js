@@ -33,10 +33,11 @@ function edit({
     className: `p-4 !my-0 w-full h-full ${_style__WEBPACK_IMPORTED_MODULE_2__.style.getColumnBackgroundColor(attributes.parentHasAmountOfColumns, attributes.index)}`
   });
   const innerBlockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useInnerBlocksProps)();
+  const titleContainer = "min-h-4rem";
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("article", {
     ...blockProps,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: _style__WEBPACK_IMPORTED_MODULE_2__.style.titleContainer,
+      className: titleContainer,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
         tagName: "h3",
         className: `text-l mb-1 ${_style__WEBPACK_IMPORTED_MODULE_2__.style.title}`,
@@ -104,7 +105,7 @@ function save({
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("article", {
     ...blockProps,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: _style__WEBPACK_IMPORTED_MODULE_1__.style.titleContainer,
+      className: _style__WEBPACK_IMPORTED_MODULE_1__.style.getTitleContainer(parentHasAmountOfColumns),
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
         tagName: "h3",
         className: `${titleSize} ${_style__WEBPACK_IMPORTED_MODULE_1__.style.title} mb-4`,
@@ -136,11 +137,19 @@ __webpack_require__.r(__webpack_exports__);
 const DEFAULT_COLOR = 'bg-primary-500';
 const style = {
   title: 'break-words hyphens-auto font-heading text-white',
-  titleContainer: 'h-7rem',
+  description: 'font-sans-serif text-white my-10',
   contentContainer: 'mb-4',
   getUpdatedColumnBackgroundIntensity: index => {
     const colorIntensity = 500 + 100 * index;
     return DEFAULT_COLOR.replace(/bg-primary-\d+/, `bg-primary-${colorIntensity}`);
+  },
+  getTitleContainer: amountOfColumns => {
+    if (amountOfColumns === 3) {
+      return 'min-h-5rem';
+    } else if (amountOfColumns === 4) {
+      return 'min-h-7rem';
+    }
+    return 'min-h-4rem';
   },
   /**
    * Returns a tailwind class for background color of the column based on the amount of columns
@@ -203,7 +212,7 @@ module.exports = window["wp"]["i18n"];
   \**************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/column","version":"0.1.0","title":"Column","category":"design","icon":"text","description":"A re-usable column.","example":{},"supports":{"html":false,"align":false},"textdomain":"column","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":["file:./view.js","column-view-script"],"attributes":{"title":{"type":"string","default":""},"content":{"type":"string","default":""},"index":{"type":"number","default":0},"parentHasAmountOfColumns":{"type":"number","enum":[3,4,5],"default":4}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/column","version":"0.1.0","title":"Column","category":"design","icon":"text","description":"A re-usable column.","example":{},"supports":{"html":false,"align":false},"textdomain":"column","editorScript":"file:./index.js","viewScript":["file:./view.js","column-view-script"],"attributes":{"title":{"type":"string","default":""},"content":{"type":"string","default":""},"index":{"type":"number","default":0},"parentHasAmountOfColumns":{"type":"number","enum":[3,4,5],"default":4}}}');
 
 /***/ })
 

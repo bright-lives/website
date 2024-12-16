@@ -12,50 +12,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ edit)
 /* harmony export */ });
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./src/blocks/section-calculation-overview/style.js");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style */ "./src/blocks/section-calculation-overview/style.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/section-calculation-overview/editor.scss");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 
-function edit({
-  attributes,
-  setAttributes
-}) {
-  const INNER_BLOCK_TEMPLATE = ['bright-lives/table-calculation'];
-  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
-    className: _style__WEBPACK_IMPORTED_MODULE_2__.style.sectionContainer
+function edit() {
+  const INNER_BLOCK_TEMPLATE = [['bright-lives/column-project-costs'], ['bright-lives/column-donate']];
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
+    className: _style__WEBPACK_IMPORTED_MODULE_1__.style.sectionContainer
   });
-  const innerBlockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps)();
-  const onChangeTitle = newTitle => {
-    setAttributes({
-      title: newTitle
-    });
-  };
+  const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useInnerBlocksProps)();
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     ...blockProps,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: _style__WEBPACK_IMPORTED_MODULE_2__.style.container,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: _style__WEBPACK_IMPORTED_MODULE_2__.style.firstColumnContainer,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-          tagName: "h2",
-          placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Title', 'custom-gutenberg-blocks'),
-          className: _style__WEBPACK_IMPORTED_MODULE_2__.style.title,
-          value: attributes.title,
-          onChange: onChangeTitle
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-          ...innerBlockProps,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
-            template: [INNER_BLOCK_TEMPLATE],
-            templateLock: "all"
-          })
-        })]
+      ...innerBlocksProps,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks, {
+        template: INNER_BLOCK_TEMPLATE,
+        templateLock: true
       })
     })
   });
@@ -81,12 +60,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function save({
-  attributes
-}) {
-  const {
-    title
-  } = attributes;
+function save() {
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
     className: _style__WEBPACK_IMPORTED_MODULE_1__.style.sectionContainer
   });
@@ -94,14 +68,7 @@ function save({
     ...blockProps,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: _style__WEBPACK_IMPORTED_MODULE_1__.style.container,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: _style__WEBPACK_IMPORTED_MODULE_1__.style.firstColumnContainer,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
-          tagName: "h2",
-          className: _style__WEBPACK_IMPORTED_MODULE_1__.style.title,
-          value: title
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks.Content, {})]
-      })
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks.Content, {})
     })
   });
 }
@@ -120,10 +87,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const style = {
   sectionContainer: 'my-24 py-20 bg-gray-200',
-  container: 'container mx-auto items-center grid grid-cols-1 md:grid-cols-2 gap-12',
-  firstColumnContainer: 'w-full',
-  title: 'text-2xl leading-normal font-serif mb-12'
+  container: 'container mx-auto items-center grid grid-cols-1 md:grid-cols-2 gap-12'
 };
+
+/***/ }),
+
+/***/ "./src/blocks/section-calculation-overview/editor.scss":
+/*!*************************************************************!*\
+  !*** ./src/blocks/section-calculation-overview/editor.scss ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -157,23 +134,13 @@ module.exports = window["wp"]["blocks"];
 
 /***/ }),
 
-/***/ "@wordpress/i18n":
-/*!******************************!*\
-  !*** external ["wp","i18n"] ***!
-  \******************************/
-/***/ ((module) => {
-
-module.exports = window["wp"]["i18n"];
-
-/***/ }),
-
 /***/ "./src/blocks/section-calculation-overview/block.json":
 /*!************************************************************!*\
   !*** ./src/blocks/section-calculation-overview/block.json ***!
   \************************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-calculator","version":"0.1.0","title":"Section Calculation overview","category":"theme","icon":"smiley","description":"Example section for an overview of a calculation. For example to show project costs.","example":{},"supports":{"html":false},"textdomain":"section-calculation-overview","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"title":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-calculator","version":"0.1.0","title":"Section Calculation overview","category":"theme","icon":"smiley","description":"Example section for an overview of a calculation. For example to show project costs.","example":{},"supports":{"html":false},"textdomain":"section-calculation-overview","editorScript":"file:./index.js","editorStyle":"file:./index.css","viewScript":"file:./view.js","attributes":{},"styles":[{"name":"fancy","label":"Fancy"}]}');
 
 /***/ })
 

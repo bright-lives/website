@@ -2,7 +2,8 @@
   "scripts": {
     "build": "wp-scripts build --webpack-src-dir=src/blocks --output-path=plugins/bright-lives-blocks/build",
     "start": "wp-scripts start --webpack-src-dir=src/blocks --output-path=plugins/bright-lives-blocks/build",
-    "style:watch": "npx tailwindcss -i ./src/tailwind.css -o ./bright-lives-theme/tailwind.css --watch"
+    "style:watch": "npx tailwindcss -i ./src/tailwind.css -o ./bright-lives-theme/tailwind.css --watch",
+    "create-block": "cd src/blocks/ && npx @wordpress/create-block@latest --namespace=bright-lives --no-plugin --variant static"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",

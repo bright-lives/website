@@ -13,11 +13,13 @@
 	},
 	"textdomain": "section-calculation-overview",
 	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
 	"viewScript": "file:./view.js",
-	"attributes": {
-		"title": {
-			"type": "string",
-			"default": ""
+	"attributes": {},
+	"styles": [
+		{
+			"name": "fancy",
+			"label": "Fancy"
 		}
-	}
+	]
 }

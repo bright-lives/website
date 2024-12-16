@@ -1,39 +1,28 @@
-import { __ } from '@wordpress/i18n';
-import {InnerBlocks, RichText, useBlockProps, useInnerBlocksProps} from '@wordpress/block-editor';
+import {InnerBlocks, useBlockProps, useInnerBlocksProps} from '@wordpress/block-editor';
 import {style} from "./style";
 
-export default function edit({ attributes, setAttributes }) {
+import './editor.scss';
 
-	const INNER_BLOCK_TEMPLATE = ['bright-lives/table-calculation'];
+export default function edit() {
+
+	const INNER_BLOCK_TEMPLATE = [
+		['bright-lives/column-project-costs'],
+		['bright-lives/column-donate'],
+	];
 
 	const blockProps = useBlockProps({
 		className: style.sectionContainer,
 	});
 
-	const innerBlockProps = useInnerBlocksProps();
-
-	const onChangeTitle = (newTitle) => {
-		setAttributes({ title: newTitle });
-	};
+	const innerBlocksProps = useInnerBlocksProps();
 
 	return (
 		<div { ...blockProps }>
-			<div className={style.container}>
-				<div className={style.firstColumnContainer}>
-					<RichText
-						tagName="h2"
-						placeholder={__('Title', 'custom-gutenberg-blocks')}
-						className={style.title}
-						value={attributes.title}
-						onChange={onChangeTitle}
-					/>
-					<div {...innerBlockProps}>
-						<InnerBlocks
-							template={[INNER_BLOCK_TEMPLATE]}
-							templateLock="all"
-						/>
-					</div>
-				</div>
+			<div {...innerBlocksProps}>
+				<InnerBlocks
+					template={INNER_BLOCK_TEMPLATE}
+					templateLock={true}
+				/>
 			</div>
 		</div>
 	);
