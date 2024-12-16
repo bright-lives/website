@@ -7,8 +7,8 @@ if (isset($args) && is_array($args)) {
 	$invert = isset($args['invert']) ? $args['invert'] : false;
 }
 
-$border_classes = $border ? ($invert ? 'border-2 border-white hover:border-black p-4' : 'border-2 border-black hover:border-white p-4') : 'py-4 border-2 border-transparent';
-$color_classes = $invert ? 'text-black hover:text-black' : 'text-black hover:text-white';
+$border_classes = $border ? ($invert ? 'border-2 border-white hover:border-primary-500 p-4' : 'border-2 border-black hover:border-white p-4') : 'py-4 border-2 border-transparent';
+$color_classes = $invert ? 'text-white hover:text-primary-500' : 'text-black hover:text-white';
 ?>
 <a href="<?php echo $url ?>" class="group inline-flex font-serif <?php echo $color_classes ?> <?php echo $border_classes ?>">
 	<span class="flex"><?php echo esc_html($text); ?></span>

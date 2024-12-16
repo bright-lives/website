@@ -3,15 +3,15 @@
         <div class="grid grid-cols-1 md:grid-cols-3">
             <div class="col-span-3 md:col-span-2 mb-8">
                 <label class="flex text-white text-2xl font-serif mb-6" for="e-mail">Schrijf je in:</label>
-                <form class="grid grid-cols-2">
+                <form class="flex">
                     <input id="e-mail" type="text" placeholder="e-mail@provider.nl" class="max-w-64 px-4 border-2 border-white" />
                     <div class="flex">
                         <?php
                         $args = array(
-                            'text' => 'Doneer nu',
+                            'text' => 'Inschrijven',
                             'url' => '#',
                             'border' => true,
-                            'invert' => false,
+                            'invert' => true,
                         );
                         get_template_part( 'template-parts/link-button/link-button', null, $args);
                         ?>
