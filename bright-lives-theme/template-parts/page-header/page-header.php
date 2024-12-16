@@ -40,7 +40,7 @@ if (isset($args) && is_array($args)) {
             </a>
         </div>
 	    <?php if (!$hide_menu) { ?>
-            <div id="menu" class="hidden md:block">
+            <div id="menu" class="mt-20 md:block">
                 <?php
                 $args = array(
                     'menu'                           => $menu_name,
