@@ -7,25 +7,27 @@ if (isset($args) && is_array($args)) {
 }
 ?>
 
-<div class="md:hidden absolute w-full z-50">
-    <div class="container mx-auto flex px-10 md:px-0">
-        <button id="menu-toggle" class="ml-auto pt-6">
-            <img src="<?php echo get_template_directory_uri() . '/assets/icons/bars-3.svg' ?>"
-                 alt="menu icon"
-                 width="30"
-                 height="30"
-                 id="icon-bars"
-            >
-            <img src="<?php echo get_template_directory_uri() . '/assets/icons/cross.svg' ?>"
-                 alt="menu icon"
-                 width="20"
-                 height="20"
-                 id="icon-cross"
-                 class="hidden mt-1 mr-2"
-            >
-        </button>
+<?php if (!$hide_menu) { ?>
+    <div class="md:hidden absolute w-full z-50">
+        <div class="container mx-auto flex px-10 md:px-0">
+            <button id="menu-toggle" class="ml-auto pt-6">
+                <img src="<?php echo get_template_directory_uri() . '/assets/icons/bars-3.svg' ?>"
+                     alt="menu icon"
+                     width="30"
+                     height="30"
+                     id="icon-bars"
+                >
+                <img src="<?php echo get_template_directory_uri() . '/assets/icons/cross.svg' ?>"
+                     alt="menu icon"
+                     width="20"
+                     height="20"
+                     id="icon-cross"
+                     class="hidden mt-1 mr-2"
+                >
+            </button>
+        </div>
     </div>
-</div>
+<?php } ?>
 
 <header class="absolute w-full z-30">
     <div class="container mx-auto flex px-10 md:px-0">
@@ -40,7 +42,7 @@ if (isset($args) && is_array($args)) {
             </a>
         </div>
 	    <?php if (!$hide_menu) { ?>
-            <div id="menu" class="mt-20 md:block">
+            <div id="menu" class="mt-20 hidden md:block">
                 <?php
                 $args = array(
                     'menu'                           => $menu_name,
