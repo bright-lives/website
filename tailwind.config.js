@@ -1,8 +1,6 @@
 module.exports = {
     content: [
-      "./bright-lives-theme/template-parts/**/*.php",
-      "./bright-lives-theme/templates/**/*.php",
-      "./bright-lives-theme/functions/**/*.php",
+      "./bright-lives-theme/**/*.php",
       "./src/blocks/**/edit.js",
       "./src/blocks/**/save.js",
       "./src/blocks/**/style.js",
@@ -55,8 +53,29 @@ module.exports = {
         },
         gridAutoRows: {
           '2fr': 'minmax(0, 2fr)',
+        },
+        typography: {
+          DEFAULT: {
+            css: {
+              h1: {
+                fontSize: '2.25rem', // text-4xl
+                lineHeight: '1.5', // leading-normal
+                fontFamily: 'Merriweather', // font-serif
+                marginBottom: '1.5rem', // mb-6
+              },
+              h2: {
+                fontSize: '1.5rem', // text-2xl
+                lineHeight: '1.5', // leading-normal
+                fontFamily: 'Merriweather', // font-serif
+                marginBottom: '1.5rem', // mb-6
+              },
+              p: {
+                fontFamily: 'Lato', // font-sans
+              },
+            }
+          }
         }
-      }
+      },
     },
     plugins: [
       require('@tailwindcss/typography'),

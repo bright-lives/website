@@ -26,6 +26,7 @@ Then you can run:
 
 ```sh
 pnpm run start
+pnpm run style:watch
 ```
 
 To start making changes. 
