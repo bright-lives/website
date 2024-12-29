@@ -15,7 +15,7 @@
                         <a
                          class="text-primary-100 hover:text-white underline underline-offset-4"
                          href="mailto:info@bright-lives.nl"
-                         title="E-mail naar info@bright-lives.nl"
+                         title="E-mail naar info@brightlives.nl"
                         >info@bright-lives.nl</a>
                     </li>
                 </ul>
