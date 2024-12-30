@@ -1,14 +1,10 @@
 <?php
-ob_start();
 /**
  * Template Name: Donate
  *
  * @package WordPress
  * @subpackage Bright lives
  */
-if (!defined('ABSPATH')) {
-	exit; // Exit if accessed directly
-}
 ?>
 
 <!DOCTYPE html>
@@ -24,15 +20,10 @@ if (!defined('ABSPATH')) {
     </div>
 
 	<main class="bg-slate-200 flex pb-20">
-		<section class="container mx-auto grid grid-cols-1 md:grid-cols-2 m-16 gap-y-20 bg-slate-200">
-            <div class="flex justify-center">
-			    <?php get_template_part('template-parts/mollie-donate-form/mollie-donate-form'); ?>
-            </div>
-		</section>
+		<?php the_content(); ?>
 	</main>
 
 	<?php get_template_part( 'template-parts/page-footer/page-footer' ); ?>
 	<?php wp_footer(); ?>
 	</body>
 </html>
-<?php ob_end_flush(); ?>
