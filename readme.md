@@ -1,11 +1,6 @@
 
 # Readme
 
-## TODO: 
-
-- Write an export script that automatically bumps the version, and then exports the plugin or theme. This will allow 
-  you to import it into the hosting provider. Add this to the build script in package.json.
-
 ## Editing files
 
 To run this application, edit `.env.example` and save it as `.env`.
@@ -74,3 +69,29 @@ docker exec bright-lives-db-1 /usr/bin/mysqldump -u root --password=$MYSQL_ROOT_
 ```
 
 This will update the `init-db.sql` file. This file is used when running the initial command to set up the WordPress installation.
+
+## Composer (and Mollie)
+
+To install composer packages, run:
+
+```bash
+composer install
+```
+
+This will install the required mollie php package in a vendor folder. 
+
+## Export
+
+Run:
+
+```bash
+pnpm run zip
+```
+
+This will create a zip files in the `./__dist__` folder:
+
+- `bright-lives-theme.zip`
+- `bright-lives-blocks.zip`
+- `bright-lives-hooks.zip`
+
+This will allow you to install the theme and plugins on another WordPress installation.

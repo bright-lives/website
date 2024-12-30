@@ -28,6 +28,17 @@ module.exports = {
             800: "#461229",
             900: "#3C1A2A",
           },
+          secondary: {
+            100: "#C4D0D8",
+            200: "#A0B2C4",
+            300: "#7D96A8",
+            400: "#4D6678",
+            500: "#3D5466",
+            600: "#2A4254",
+            700: "#1E3642",
+            800: "#122A36",
+            900: "#1A2A32",
+          }
         },
         backgroundImage: {
           'hero-home': "url('/wp-content/themes/bright-lives-theme/assets/images/backgrounds/hero-01-free-img.jpg')",

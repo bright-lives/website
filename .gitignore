@@ -7,3 +7,4 @@ package-lock.json
 /plugins/hello.php
 /plugins/index.php
 __dist__
+/vendor
