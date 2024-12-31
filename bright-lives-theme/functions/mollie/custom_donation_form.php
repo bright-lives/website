@@ -3,9 +3,14 @@ if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly
 }
 
-if (!isset($_ENV['API_KEY_MOLLIE'])) {
-	error_log("Mollie API key not set.");
-	echo '[Mollie API key not set.]';
+require_once get_template_directory() . '/functions/classes/bl_data_encryption.php';
+$bl_data_encryption = new BL_Data_Encryption();
+
+$mollie_api_key = get_option('bl_api_key_mollie_field');
+
+if (empty($mollie_api_key) ) {
+	error_log("Mollie API key not set in \"Settings => General\".");
+	echo 'Mollie API key not set. Please set the API key in "Settings => General".';
 	return;
 }
 
@@ -13,7 +18,7 @@ require_once __DIR__ . '/../../../../../vendor/autoload.php';
 use Mollie\Api\MollieApiClient;
 
 $mollie = new \Mollie\Api\MollieApiClient();
-$mollie -> setApiKey($_ENV['API_KEY_MOLLIE']);
+$mollie -> setApiKey($bl_data_encryption->decrypt_data($mollie_api_key, LOGGED_IN_SALT));
 
 $custom_donation_form_error = '';
 
