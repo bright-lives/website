@@ -1,4 +1,7 @@
 <?php
+/**
+ * More information: https://docs.mollie.com/reference/create-payment
+ */
 
 class MolliePayment {
 	private $apiKey;
