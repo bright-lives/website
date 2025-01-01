@@ -4,9 +4,11 @@ if (!defined('ABSPATH')) {
 }
 
 require_once get_template_directory() . '/functions/classes/bl_data_encryption.php';
-$bl_data_encryption = new BL_Data_Encryption();
+require_once get_template_directory() . '/functions/classes/mollie_payment.php';
 
+$bl_data_encryption = new BL_Data_Encryption();
 $mollie_api_key = get_option('bl_api_key_mollie_field');
+$custom_donation_form_error = '';
 
 if (empty($mollie_api_key) ) {
 	error_log("Mollie API key not set in \"Settings => General\".");
@@ -14,13 +16,7 @@ if (empty($mollie_api_key) ) {
 	return;
 }
 
-require_once __DIR__ . '/../../../../../vendor/autoload.php';
-use Mollie\Api\MollieApiClient;
-
-$mollie = new \Mollie\Api\MollieApiClient();
-$mollie -> setApiKey($bl_data_encryption->decrypt_data($mollie_api_key, LOGGED_IN_SALT));
-
-$custom_donation_form_error = '';
+$mollie = new MolliePayment($bl_data_encryption->decrypt_data($mollie_api_key, LOGGED_IN_SALT));
 
 function isValidAmount($amount): bool {
 	return is_numeric($amount) && $amount > 0 && $amount < 9999;
@@ -49,20 +45,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['mollie_donate_nonce'])
     }
 
     try {
-        $payment = $mollie->payments->create([
-            "amount" => [
-                "currency" => "EUR",
-                "value" => number_format($value, 2, '.', '')
-            ],
-            "description" => "Donatie van " . $name,
-            "redirectUrl" => home_url('/bedankt/'),
-	        // "webhookUrl" => home_url('/wp-json/mollie/v1/webhook'),
-            "metadata" => [ "order_id" => $orderId ],
-        ]);
+	    $payment = $mollie->create([
+		    "amount" => [
+			    "currency" => "EUR",
+			    "value" => number_format($value, 2, '.', '')
+		    ],
+		    "description" => "Donatie van " . $name,
+		    "redirectUrl" => home_url('/bedankt/'),
+		    // "webhookUrl" => home_url('/wp-json/mollie/v1/webhook'),
+		    "metadata" => [ "order_id" => $orderId ],
+	    ]);
 
-        header("Location: " . $payment->getCheckoutUrl(), true, 303);
+	    $checkoutUrl = $mollie->getCheckoutUrl($payment);
+	    header("Location: " . $checkoutUrl, true, 303);
         exit();
-    } catch (\Mollie\Api\Exceptions\ApiException $e) {
+    } catch (Exception $e) {
         error_log("Mollie API Error: " . $e->getMessage());
         $custom_donation_form_error = "API call failed: " . htmlspecialchars($e->getMessage());
     }

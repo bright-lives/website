@@ -70,16 +70,6 @@ docker exec bright-lives-db-1 /usr/bin/mysqldump -u root --password=$MYSQL_ROOT_
 
 This will update the `init-db.sql` file. This file is used when running the initial command to set up the WordPress installation.
 
-## Composer (and Mollie)
-
-To install composer packages, run:
-
-```bash
-composer install
-```
-
-This will install the required mollie php package in a vendor folder. 
-
 ## Export
 
 Run:
