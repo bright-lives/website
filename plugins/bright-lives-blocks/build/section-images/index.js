@@ -399,7 +399,7 @@ module.exports = window["wp"]["primitives"];
   \**********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-images","version":"0.1.0","title":"Section Images","category":"theme","icon":"smiley","description":"A section of three images.","example":{},"supports":{"html":false},"textdomain":"section-images","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","attributes":{"images":{"type":"array","default":[{"imageUrl":"","imageAlt":""},{"imageUrl":"","imageAlt":""},{"imageUrl":"","imageAlt":""}]}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-images","version":"0.1.0","title":"Section Images","category":"sections","icon":"columns","description":"A section of three images.","example":{},"supports":{"html":false},"textdomain":"section-images","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js","attributes":{"images":{"type":"array","default":[{"imageUrl":"","imageAlt":""},{"imageUrl":"","imageAlt":""},{"imageUrl":"","imageAlt":""}]}}}');
 
 /***/ })
 

@@ -180,7 +180,7 @@ module.exports = window["wp"]["i18n"];
   \****************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/column-project-costs","version":"0.1.0","title":"Column Project Costs","category":"embed","icon":"smiley","description":"Column with the project costs, using the calculation table.","example":{},"supports":{"html":false},"textdomain":"column-project-costs","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"title":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/column-project-costs","version":"0.1.0","title":"Column Project Costs","category":"embed","icon":"text","description":"Column with the project costs, using the calculation table.","example":{},"supports":{"html":false},"textdomain":"column-project-costs","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"title":{"type":"string","default":""}}}');
 
 /***/ })
 

@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "title": "Column Project Costs",
   "category": "embed",
-  "icon": "smiley",
+  "icon": "text",
   "description": "Column with the project costs, using the calculation table.",
   "example": {},
   "supports": {

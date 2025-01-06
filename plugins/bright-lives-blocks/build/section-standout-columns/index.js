@@ -253,7 +253,7 @@ module.exports = window["wp"]["i18n"];
   \********************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/standout-columns","version":"0.1.0","title":"Standout Columns","category":"theme","icon":"columns","description":"A full width section with a title and columns that have a colored background.","example":{},"supports":{"html":false,"align":false},"textdomain":"standout-columns","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":["file:./view.js","standout-columns-view-script"],"attributes":{"title":{"type":"string","default":""},"amountOfColumns":{"type":"number","default":0}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/standout-columns","version":"0.1.0","title":"Standout Columns","category":"sections","icon":"columns","description":"A full width section with a title and columns that have a colored background.","example":{},"supports":{"html":false,"align":false},"textdomain":"standout-columns","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":["file:./view.js","standout-columns-view-script"],"attributes":{"title":{"type":"string","default":""},"amountOfColumns":{"type":"number","default":0}}}');
 
 /***/ })
 

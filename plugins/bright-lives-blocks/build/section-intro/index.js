@@ -188,7 +188,7 @@ module.exports = window["wp"]["i18n"];
   \*********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-intro","version":"0.1.0","title":"Section Intro","category":"theme","icon":"smiley","description":"Section intro.","example":{},"supports":{"html":false},"textdomain":"section-intro","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"title":{"type":"string","default":""},"intro":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-intro","version":"0.1.0","title":"Section Intro","category":"sections","icon":"columns","description":"A section with a standardized heading and introduction text in the left column. Use this for the start of a page.","example":{},"supports":{"html":false},"textdomain":"section-intro","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"title":{"type":"string","default":""},"intro":{"type":"string","default":""}}}');
 
 /***/ })
 

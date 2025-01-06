@@ -140,7 +140,7 @@ module.exports = window["wp"]["blocks"];
   \************************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-calculator","version":"0.1.0","title":"Section Calculation overview","category":"theme","icon":"smiley","description":"Example section for an overview of a calculation. For example to show project costs.","example":{},"supports":{"html":false},"textdomain":"section-calculation-overview","editorScript":"file:./index.js","editorStyle":"file:./index.css","viewScript":"file:./view.js","attributes":{},"styles":[{"name":"fancy","label":"Fancy"}]}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-calculator","version":"0.1.0","title":"Section Calculation overview","category":"sections","icon":"columns","description":"Example section for an overview of a calculation. For example to show project costs.","example":{},"supports":{"html":false},"textdomain":"section-calculation-overview","editorScript":"file:./index.js","editorStyle":"file:./index.css","viewScript":"file:./view.js","attributes":{},"styles":[{"name":"fancy","label":"Fancy"}]}');
 
 /***/ })
 

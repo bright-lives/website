@@ -4,9 +4,9 @@
   "name": "bright-lives/progress-bar",
   "version": "0.1.0",
   "title": "Progress Bar",
-  "category": "design",
+  "category": "components",
   "icon": "text",
-  "description": "A progress bar.",
+  "description": "A bar that shows the progress of something. You fill in the start, end and current point.",
   "example": {},
   "supports": {
     "html": false

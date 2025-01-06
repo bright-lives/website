@@ -164,7 +164,7 @@ module.exports = window["wp"]["i18n"];
   \********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/progress-bar","version":"0.1.0","title":"Progress Bar","category":"design","icon":"text","description":"A progress bar.","example":{},"supports":{"html":false},"textdomain":"progress-bar","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"start":{"type":"number","default":0},"end":{"type":"number","default":100},"current":{"type":"number","default":20}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/progress-bar","version":"0.1.0","title":"Progress Bar","category":"components","icon":"text","description":"A bar that shows the progress of something. You fill in the start, end and current point.","example":{},"supports":{"html":false},"textdomain":"progress-bar","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"start":{"type":"number","default":0},"end":{"type":"number","default":100},"current":{"type":"number","default":20}}}');
 
 /***/ })
 

@@ -4,8 +4,8 @@
   "name": "bright-lives/section-calculator",
   "version": "0.1.0",
   "title": "Section Calculation overview",
-  "category": "theme",
-  "icon": "smiley",
+  "category": "sections",
+  "icon": "columns",
   "description": "Example section for an overview of a calculation. For example to show project costs.",
   "example": {},
   "supports": {

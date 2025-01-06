@@ -287,7 +287,7 @@ module.exports = window["wp"]["primitives"];
   \*********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-facts","version":"0.1.0","title":"Section Facts","category":"theme","icon":"smiley","description":"Section with facts.","example":{},"supports":{"html":false},"textdomain":"section-facts","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"facts":{"type":"array","default":[{"title":"","content":""}]}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/section-facts","version":"0.1.0","title":"Section Facts","category":"sections","icon":"columns","description":"A section with in the left hand column a title, and room to place text in the right hand side.","example":{},"supports":{"html":false},"textdomain":"section-facts","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"facts":{"type":"array","default":[{"title":"","content":""}]}}}');
 
 /***/ })
 

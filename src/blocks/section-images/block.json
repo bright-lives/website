@@ -4,8 +4,8 @@
 	"name": "bright-lives/section-images",
 	"version": "0.1.0",
 	"title": "Section Images",
-	"category": "theme",
-	"icon": "smiley",
+	"category": "sections",
+	"icon": "columns",
 	"description": "A section of three images.",
 	"example": {},
 	"supports": {

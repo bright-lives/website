@@ -4,9 +4,9 @@
   "name": "bright-lives/column",
   "version": "0.1.0",
   "title": "Column",
-  "category": "design",
+  "category": "embed",
   "icon": "text",
-  "description": "A re-usable column.",
+  "description": "A re-usable column. Has a colored background, and optionally a title, content and button.",
   "example": {},
   "supports": {
     "html": false,

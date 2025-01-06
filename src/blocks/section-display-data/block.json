@@ -4,7 +4,7 @@
   "name": "bright-lives/display-data",
   "version": "0.1.0",
   "title": "Display data",
-  "category": "theme",
+  "category": "sections",
   "icon": "tagcloud",
   "description": "A full width section with a title, description and data in numbers.",
   "example": {},

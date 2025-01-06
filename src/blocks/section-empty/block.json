@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bright-lives/section-empty",
+	"version": "0.1.0",
+	"title": "Section Empty",
+	"category": "sections",
+	"icon": "align-wide",
+	"description": "Use this if you want the freedom to create your own section.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "section-empty",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"amountOfColumns": {
+			"type": "number",
+			"default": 0
+		}
+	}
+}

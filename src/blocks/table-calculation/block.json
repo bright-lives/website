@@ -4,7 +4,7 @@
 	"name": "bright-lives/table-calculation",
 	"version": "0.1.0",
 	"title": "Table Calculation",
-	"category": "widgets",
+	"category": "components",
 	"icon": "editor-ol-rtl",
 	"description": "A table for the calculation.",
 	"example": {},

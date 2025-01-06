@@ -11,6 +11,7 @@ function custom_allowed_block_types($allowed_blocks, $editor_context): array {
 	$allowed_core_blocks = [
     'core/paragraph',
     'core/heading',
+		'core/shortcode',
 	];
 
 	$all_blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();

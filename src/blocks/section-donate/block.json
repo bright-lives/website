@@ -4,7 +4,7 @@
   "name": "bright-lives/donate",
   "version": "0.1.0",
   "title": "Donate section",
-  "category": "theme",
+  "category": "sections",
   "icon": "money-alt",
   "description": "A full width section with a title, description and the call to action for donations",
   "example": {},

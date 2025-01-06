@@ -223,7 +223,7 @@ module.exports = window["wp"]["i18n"];
   \*********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/column-donate","version":"0.1.0","title":"Column Donate","category":"embed","icon":"smiley","description":"A column with a donate progress bar and button.","example":{},"supports":{"html":false},"textdomain":"column-donate","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"title":{"type":"string","default":""},"description":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/column-donate","version":"0.1.0","title":"Column Donate","category":"embed","icon":"text","description":"A column with a donate progress bar and button.","example":{},"supports":{"html":false},"textdomain":"column-donate","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"title":{"type":"string","default":""},"description":{"type":"string","default":""}}}');
 
 /***/ })
 

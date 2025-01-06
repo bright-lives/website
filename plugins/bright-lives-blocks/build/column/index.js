@@ -212,7 +212,7 @@ module.exports = window["wp"]["i18n"];
   \**************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/column","version":"0.1.0","title":"Column","category":"design","icon":"text","description":"A re-usable column.","example":{},"supports":{"html":false,"align":false},"textdomain":"column","editorScript":"file:./index.js","viewScript":["file:./view.js","column-view-script"],"attributes":{"title":{"type":"string","default":""},"content":{"type":"string","default":""},"index":{"type":"number","default":0},"parentHasAmountOfColumns":{"type":"number","enum":[3,4,5],"default":4}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/column","version":"0.1.0","title":"Column","category":"embed","icon":"text","description":"A re-usable column. Has a colored background, and optionally a title, content and button.","example":{},"supports":{"html":false,"align":false},"textdomain":"column","editorScript":"file:./index.js","viewScript":["file:./view.js","column-view-script"],"attributes":{"title":{"type":"string","default":""},"content":{"type":"string","default":""},"index":{"type":"number","default":0},"parentHasAmountOfColumns":{"type":"number","enum":[3,4,5],"default":4}}}');
 
 /***/ })
 

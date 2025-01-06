@@ -4,9 +4,9 @@
   "name": "bright-lives/section-facts",
   "version": "0.1.0",
   "title": "Section Facts",
-  "category": "theme",
-  "icon": "smiley",
-  "description": "Section with facts.",
+  "category": "sections",
+  "icon": "columns",
+  "description": "A section with in the left hand column a title, and room to place text in the right hand side.",
   "example": {},
   "supports": {
     "html": false

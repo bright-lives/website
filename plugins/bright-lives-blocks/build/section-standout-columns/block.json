@@ -4,7 +4,7 @@
   "name": "bright-lives/standout-columns",
   "version": "0.1.0",
   "title": "Standout Columns",
-  "category": "theme",
+  "category": "sections",
   "icon": "columns",
   "description": "A full width section with a title and columns that have a colored background.",
   "example": {},

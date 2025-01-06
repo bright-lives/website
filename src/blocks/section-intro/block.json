@@ -4,9 +4,9 @@
 	"name": "bright-lives/section-intro",
 	"version": "0.1.0",
 	"title": "Section Intro",
-	"category": "theme",
-	"icon": "smiley",
-	"description": "Section intro.",
+	"category": "sections",
+	"icon": "columns",
+	"description": "A section with a standardized heading and introduction text in the left column. Use this for the start of a page.",
 	"example": {},
 	"supports": {
 		"html": false

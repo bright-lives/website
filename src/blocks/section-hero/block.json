@@ -4,9 +4,9 @@
 	"name": "bright-lives/hero",
 	"version": "0.1.0",
 	"title": "Hero",
-	"category": "theme",
+	"category": "sections",
 	"icon": "cover-image",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "A hero section. Usually the first section on a page. A big image which can take up the full height, or a large part of the height.",
 	"example": {},
 	"supports": {
 		"html": false,

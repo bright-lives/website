@@ -609,7 +609,7 @@ module.exports = window["wp"]["primitives"];
   \********************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/hero","version":"0.1.0","title":"Hero","category":"theme","icon":"cover-image","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false,"align":false},"textdomain":"hero","editorScript":"file:./index.js","viewScript":["file:./view.js","hero-view-script"],"attributes":{"heroTitle":{"type":"string","source":"html","selector":"[data-id=\'hero-title\']","default":""},"height":{"enum":["full","fixed"],"default":"full"},"imageUrl":{"type":"string","default":""},"imageAlt":{"type":"string","default":""}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/hero","version":"0.1.0","title":"Hero","category":"sections","icon":"cover-image","description":"A hero section. Usually the first section on a page. A big image which can take up the full height, or a large part of the height.","example":{},"supports":{"html":false,"align":false},"textdomain":"hero","editorScript":"file:./index.js","viewScript":["file:./view.js","hero-view-script"],"attributes":{"heroTitle":{"type":"string","source":"html","selector":"[data-id=\'hero-title\']","default":""},"height":{"enum":["full","fixed"],"default":"full"},"imageUrl":{"type":"string","default":""},"imageAlt":{"type":"string","default":""}}}');
 
 /***/ })
 

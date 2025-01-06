@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bright-lives/column-empty",
+	"version": "0.1.0",
+	"title": "Column Empty",
+	"category": "embed",
+	"icon": "text",
+	"description": "Use this if you want the freedom to create your own column.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "column-empty",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": ""
+		},
+		"intro": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

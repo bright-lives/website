@@ -4,7 +4,7 @@
 	"name": "bright-lives/section-highlight",
 	"version": "0.1.0",
 	"title": "Section Highlight",
-	"category": "theme",
+	"category": "sections",
 	"icon": "align-pull-right",
 	"description": "A full width section with a title, description, button and image.",
 	"example": {},

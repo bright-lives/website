@@ -4,9 +4,9 @@
 	"name": "bright-lives/button",
 	"version": "0.1.0",
 	"title": "Button",
-	"category": "design",
+	"category": "components",
 	"icon": "button",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "A button to use to link to another page.",
 	"example": {},
 	"supports": {
 		"html": false,

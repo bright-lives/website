@@ -386,7 +386,7 @@ module.exports = window["wp"]["primitives"];
   \*************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/table-calculation","version":"0.1.0","title":"Table Calculation","category":"widgets","icon":"editor-ol-rtl","description":"A table for the calculation.","example":{},"supports":{"html":false},"textdomain":"table-calculation","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"rows":{"type":"array","default":[{"kind":"","item":"","amount":0,"unitPrice":0}]},"totalPrice":{"type":"number","default":0}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/table-calculation","version":"0.1.0","title":"Table Calculation","category":"components","icon":"editor-ol-rtl","description":"A table for the calculation.","example":{},"supports":{"html":false},"textdomain":"table-calculation","editorScript":"file:./index.js","viewScript":"file:./view.js","attributes":{"rows":{"type":"array","default":[{"kind":"","item":"","amount":0,"unitPrice":0}]},"totalPrice":{"type":"number","default":0}}}');
 
 /***/ })
 

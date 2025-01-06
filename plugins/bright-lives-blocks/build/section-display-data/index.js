@@ -213,7 +213,7 @@ module.exports = window["wp"]["i18n"];
   \****************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/display-data","version":"0.1.0","title":"Display data","category":"theme","icon":"tagcloud","description":"A full width section with a title, description and data in numbers.","example":{},"supports":{"html":false,"align":false},"textdomain":"display-data","editorScript":"file:./index.js","viewScript":["file:./view.js","standout-columns-view-script"],"attributes":{"title":{"type":"string","default":""},"content":{"type":"string","default":""},"items":{"type":"array","default":[{"title":"","amount":"0"},{"title":"","amount":"0"},{"title":"","amount":"0"},{"title":"","amount":"0"}]}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"bright-lives/display-data","version":"0.1.0","title":"Display data","category":"sections","icon":"tagcloud","description":"A full width section with a title, description and data in numbers.","example":{},"supports":{"html":false,"align":false},"textdomain":"display-data","editorScript":"file:./index.js","viewScript":["file:./view.js","standout-columns-view-script"],"attributes":{"title":{"type":"string","default":""},"content":{"type":"string","default":""},"items":{"type":"array","default":[{"title":"","amount":"0"},{"title":"","amount":"0"},{"title":"","amount":"0"},{"title":"","amount":"0"}]}}}');
 
 /***/ })
 

@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "title": "Column Donate",
   "category": "embed",
-  "icon": "smiley",
+  "icon": "text",
   "description": "A column with a donate progress bar and button.",
   "example": {},
   "supports": {
