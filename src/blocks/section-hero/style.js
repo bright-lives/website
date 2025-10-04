@@ -1,6 +1,6 @@
 export const style = {
   heroWrapper: 'bg-amber-200',
-  heroTitleContainer: 'container my-auto flex h-full px-10 md:px-0',
+  heroTitleContainer: 'container mx-auto flex h-full px-10 md:px-0',
   heroTitleContainerFullScreen: 'items-center',
   heroTitleContainerFixedHeight: 'items-end',
   heroTitle: 'text-white text-4xl lg:text-5xl xxl:text-6xl !leading-normal font-display',

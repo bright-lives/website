@@ -11,11 +11,13 @@ Then simply use:
 docker compose up
 ```
 
+>  Note: It will either create a new docker container if it does not exist yet, otherwise re-use the existing one.
+
 This allows you to use: 
 - The front-end site: `http://localhost:8000` 
 - The BE admin: `http://localhost:8000/wp-admin`.
 
->  Note: It will either create a new docker container if it does not exist yet, otherwise re-use the existing one.
+>  Note: The admin username and password will be in the .env file.
 
 Then you can run:
 

@@ -14,7 +14,7 @@ export default function edit({ attributes, setAttributes }) {
 	];
 
 	const blockProps = useBlockProps({
-			className: 'w-full',
+			className: 'w-full p-8 bg-primary-500',
 	});
 	const innerBlockProps = useInnerBlocksProps();
 
@@ -25,14 +25,14 @@ export default function edit({ attributes, setAttributes }) {
 				className={style.title}
 				value={attributes.title}
 				onChange={(title) => setAttributes({title})}
-				placeholder={__('Enter title here', 'custom-gutenberg-blocks')}
+				placeholder={__('Enter title here', 'column-project-costs-explainer')}
 			/>
 			<RichText
 				tagName="p"
 				className={style.description}
 				value={attributes.description}
 				onChange={(description) => setAttributes({description})}
-				placeholder={__('Enter description here', 'custom-gutenberg-blocks')}
+				placeholder={__('Enter description here', 'column-project-costs-explainer')}
 			/>
 			<div {...innerBlockProps}>
 				<InnerBlocks

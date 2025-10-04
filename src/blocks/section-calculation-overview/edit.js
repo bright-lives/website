@@ -7,7 +7,7 @@ export default function edit() {
 
 	const INNER_BLOCK_TEMPLATE = [
 		['bright-lives/column-project-costs'],
-		['bright-lives/column-donate'],
+		['bright-lives/column-project-costs-explainer'],
 	];
 
 	const blockProps = useBlockProps({

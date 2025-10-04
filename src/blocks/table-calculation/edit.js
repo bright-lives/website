@@ -9,7 +9,6 @@ export default function edit({attributes, setAttributes}) {
 		const newRow = { kind: '', item: '', amount: 0, unitPrice: 0 };
 		setAttributes({ rows: [...attributes.rows, newRow] });
 	}
-
 	const updateItem = (index, key, value) => {
 		const updatedRows = [...attributes.rows];
 		updatedRows[index] = { ...updatedRows[index], [key]: value };
@@ -17,6 +16,10 @@ export default function edit({attributes, setAttributes}) {
 	};
 
 	const totalPrice = attributes.rows.reduce((total, row) => total + (row.amount * row.unitPrice), 0);
+	const removeRow = (index) => {
+		const updatedRows = attributes.rows.filter((_, i) => i !== index);
+		setAttributes({ rows: updatedRows });
+	};
 
 	setAttributes({ totalPrice });
 
@@ -33,24 +36,27 @@ export default function edit({attributes, setAttributes}) {
 			</thead>
 			<tbody>
 			{attributes.rows.map((row, index) => (
-				<tr className={style.tr}>
+				<tr className={style.tr} key={index}>
 					<td className={style.td}>
 						<TextControl
-							label={__('Kind', 'custom-gutenberg-blocks')}
+							label=""
+							aria-label={__('Kind', 'custom-gutenberg-blocks')}
 							value={row.kind}
 							onChange={(value) => updateItem(index, 'kind', value)}
 						/>
 					</td>
 					<td className={style.td}>
 						<TextControl
-							label={__('Item', 'custom-gutenberg-blocks')}
+							label=""
+							aria-label={__('Item', 'custom-gutenberg-blocks')}
 							value={row.item}
 							onChange={(value) => updateItem(index, 'item', value)}
 						/>
 					</td>
 					<td className={style.td}>
 						<TextControl
-							label={__('Amount', 'custom-gutenberg-blocks')}
+							label=""
+							aria-label={__('Amount', 'custom-gutenberg-blocks')}
 							type="number"
 							value={row.amount}
 							onChange={(value) => updateItem(index, 'amount', value)}
@@ -58,7 +64,8 @@ export default function edit({attributes, setAttributes}) {
 					</td>
 					<td className={`${style.td} tabular-nums`}>
 						<TextControl
-							label={__('Unit price', 'custom-gutenberg-blocks')}
+							label=""
+							aria-label={__('Unit price', 'custom-gutenberg-blocks')}
 							type="number"
 							value={row.unitPrice}
 							onChange={(value) => updateItem(index, 'unitPrice', value)}
@@ -66,6 +73,14 @@ export default function edit({attributes, setAttributes}) {
 					</td>
 					<td className={`${style.tdSubTotal} ${style.numberFontFormatting}`}>
 						{convertToLocalCurrency(row.amount * row.unitPrice)}
+					</td>
+					<td className="align-middle text-center">
+						<Button
+							icon={<span aria-hidden="true">✕</span>}
+							aria-label={__('Remove row', 'custom-gutenberg-blocks')}
+							onClick={() => removeRow(index)}
+							className="ml-2 p-2 rounded-full hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-400"
+						/>
 					</td>
 				</tr>
 			))}

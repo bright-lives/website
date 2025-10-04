@@ -4,4 +4,4 @@ import edit from './edit';
 import save from './save';
 import metadata from './block.json';
 
-registerBlockType(metadata.name, { edit, save });
+registerBlockType('bright-lives/column-project-costs-explainer', { edit, save });

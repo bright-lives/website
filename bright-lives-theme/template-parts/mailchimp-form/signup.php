@@ -2,7 +2,7 @@
     <div id="mc_embed_signup">
         <form action="https://childsupport-ghana.us3.list-manage.com/subscribe/post?u=98966cf77e95c0813f0aa32a5&amp;id=7c152cbcab&amp;f_id=009637e2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
             <div class="md:flex">
-                <input type="email" name="EMAIL" id="mce-EMAIL" required="" placeholder="e-mail@provider.nl" class="p-4 w-full md:max-w-64 mb-4 md:mb-0 border-2 border-white" />
+                <input type="email" name="EMAIL" id="mce-EMAIL" required="" placeholder="e-mail@provider.nl" class="p-4 text-white w-full md:max-w-64 mb-4 md:mb-0 border-2 border-white" />
                 <div class="flex">
                     <button
                             class="inline-flex w-full md:w-auto font-serif border-2 text-white border-white hover:text-primary-500 hover:border-primary-500 p-4"

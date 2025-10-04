@@ -8,48 +8,17 @@ module.exports = {
     ],
     theme: {
       container: {
-        center: true,
-      },
-      fontFamily: {
-        "sans-serif": ['Lato'],
-        "serif": ['Merriweather'],
-        "heading": ['Merriweather'],
-        "display": ['Merriweather'],
-        "mono": ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas'],
+        center: true,      // centers the container horizontally
+        padding: '1rem',   // adds horizontal padding inside container
+        screens: {         // define max-width aka container queries breakpoints
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+          '2xl': '1536px',
+        },
       },
       extend: {
-        colors: {
-          primary: {
-            100: "#F8C4E3",
-            400: '#8e4865',
-            500: "#833556",
-            600: "#6F2A47",
-            700: "#5A1E38",
-            800: "#461229",
-            900: "#3C1A2A",
-          },
-          secondary: {
-            100: "#C4D0D8",
-            200: "#A0B2C4",
-            300: "#7D96A8",
-            400: "#4D6678",
-            500: "#3D5466",
-            600: "#2A4254",
-            700: "#1E3642",
-            800: "#122A36",
-            900: "#1A2A32",
-          }
-        },
-        backgroundImage: {
-          'hero-home': "url('/wp-content/themes/bright-lives-theme/assets/images/backgrounds/hero-01-free-img.jpg')",
-          'hero-projects': "url('/wp-content/themes/bright-lives-theme/assets/images/content/PA230074.jpg')",
-          'hero-donate': "url('/wp-content/themes/bright-lives-theme/assets/images/content/PA230280-slim.jpg')",
-          'home-tile-1': "url('/wp-content/themes/bright-lives-theme/assets/images/backgrounds/eten-tafel.jpeg')",
-          'home-tile-2': "url('/wp-content/themes/bright-lives-theme/assets/images/backgrounds/jongens-stoep.png')",
-          'home-tile-3': "url('/wp-content/themes/bright-lives-theme/assets/images/backgrounds/klaslokaal.jpeg')",
-          'radial-gradient': 'radial-gradient(circle at top left, #F8C4E3, #3C1A2A)',
-          'radial-gradient-opacity': 'radial-gradient(circle at top left, rgba(248, 196, 227, 0.5), rgba(60, 26, 42, 0.5))',
-        },
         height: {
           '80vh': '80vh',
           '60vh': '60vh',
@@ -58,9 +27,6 @@ module.exports = {
           '4rem': '4rem',
           '5rem': '5rem',
           '7rem': '7rem',
-        },
-        boxShadow: {
-          'custom-inset': 'inset 0 0 0 1px #1e1e1e',
         },
         gridAutoRows: {
           '2fr': 'minmax(0, 2fr)',

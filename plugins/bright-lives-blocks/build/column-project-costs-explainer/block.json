@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "bright-lives/column-donate",
+  "name": "bright-lives/column-project-costs-explainer",
   "version": "0.1.0",
-  "title": "Column Donate",
+  "title": "Column Project Costs Explainer",
   "category": "embed",
   "icon": "text",
   "description": "A column with a donate progress bar and button.",
@@ -11,7 +11,7 @@
   "supports": {
     "html": false
   },
-  "textdomain": "column-donate",
+  "textdomain": "column-project-costs-explainer",
   "editorScript": "file:./index.js",
   "viewScript": "file:./view.js",
   "attributes": {
