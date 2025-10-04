@@ -40,7 +40,7 @@ export default function Edit({ attributes, setAttributes }) {
 				</Toolbar>
 			</BlockControls>
 			<div { ...blockProps }>
-				<div className={`grid ${gridClass}`}>
+				<div className={`grid ${gridClass} bg-radial-gradient-opacity`}>
 					<div className={`${columnClass} z-50`}>
 						<div className={`${style.heroTitleContainer} ${styleTitleMap[attributes.height]} px-8`}>
 							<RichText
@@ -64,6 +64,7 @@ export default function Edit({ attributes, setAttributes }) {
 						/>
 					</section>
 				</div>
+        <div className="bg-radial-gradient-opacity"></div>
 			</div>
 		</>
 	);

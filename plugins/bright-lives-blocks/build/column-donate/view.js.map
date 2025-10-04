@@ -1,1 +1,0 @@
-{"version":3,"file":"column-donate/view.js","mappings":";;;;AAAA;AACAA,OAAO,CAACC,GAAG,CAAC,sDAAsD,CAAC;AACnE,8B","sources":["webpack:///./src/blocks/column-donate/view.js"],"sourcesContent":["/* eslint-disable no-console */\nconsole.log(\"Hello World! (from bright-lives-column-donate block)\");\n/* eslint-enable no-console */\n"],"names":["console","log"],"sourceRoot":""}
