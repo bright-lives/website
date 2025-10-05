@@ -1,4 +1,11 @@
-@import "tailwindcss";
+@layer theme, base, components, utilities;
+
+/* used layers to have tailwind css take presedence over reset.min and common.min for Wordpress Admin styling */
+/* https://github.com/tailwindlabs/tailwindcss/discussions/16934 */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
 @tailwind utilities;
 
 @theme {

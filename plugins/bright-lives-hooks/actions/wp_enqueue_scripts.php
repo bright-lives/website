@@ -7,10 +7,5 @@ function enqueue_custom_scripts(): void {
 		null,
 		true,
 	);
-
-	wp_enqueue_style(
-		'tailwind-css',
-		get_template_directory_uri() . '/tailwind.css'
-	);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');

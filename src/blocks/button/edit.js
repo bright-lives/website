@@ -52,7 +52,7 @@ export default function Edit({ attributes, setAttributes }) {
 							ref={richTextRef}
 							tagName="p"
 							value={text}
-							className="text-sm"
+							className="text-sm m-0"
 							onChange={(text) => setAttributes({text})}
 							allowedFormats={[]}
 							placeholder={__('Add text...', 'custom-gutenberg-blocks')}
